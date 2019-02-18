@@ -149,6 +149,7 @@ In many sciences it becomes the de factor **lingua franca** for statistics.
 ]
 
 ---
+
 # R is so popular because
 
 There are many good reasons to prefer R over superficially more user friendly software such as **Excel** or **SPSS** or more complex programming languages like **C++** or **Python**. 
