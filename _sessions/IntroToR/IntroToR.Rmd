@@ -1,23 +1,11 @@
 ---
-title: "Intro to R"
-author: "Introduction to R<br>
+title: "Intro to R!"
+author: "
+  Introduction to R<br>
   <a href='https://therbootcamp.github.io'>
-    Bern R Bootcamp
-  </a>
-  <br>
-  <a href='https://dwulff.github.io/Intro2R_Unibe/'>
-    <i class='fas fa-clock' style='font-size:.9em;'></i>
-  </a>&#8239; 
-  <a href='https://therbootcamp.github.io'>
-    <i class='fas fa-home' style='font-size:.9em;' ></i>
-  </a>&#8239;
-  <a href='mailto:therbootcamp@gmail.com'>
-    <i class='fas fa-envelope' style='font-size: .9em;'></i>
-  </a>&#8239;
-  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'>
-    <i class='fab fa-linkedin' style='font-size: .9em;'></i>
+    R Bootcamp
   </a>"
-date: "February 2019"
+date: "FS 2019"
 output:
   xaringan::moon_reader:
     css: ["default", "baselrbootcamp.css"]
@@ -43,12 +31,6 @@ layout: true
         </font>
       </span>
     </a>
-    <a href="https://therbootcamp.github.io/">
-      <font color="#7E7E7E">
-       Introduction to R | February 2019
-      </font>
-    </a>
-    </span>
   </div> 
 
 ---
@@ -142,6 +124,31 @@ In many sciences it becomes the de factor **lingua franca** for statistics.
 
 ---
 
+# Why R?
+
+.pull-left3[
+R steadily **grows in popularity**. 
+
+Today, R is one of the **most popular languages for data science** and overall. 
+
+In terms of the number of data science jobs, **R beats SAS and Matlab**, and is on par with Python.
+
+In many sciences it becomes the de factor **lingua franca** for statistics.
+
+<p style="font-size:10px;float:bottom">
+  Image source: http://r4stats.com/blog/
+<p>
+
+
+]
+
+.pull-right6[
+<p align="center">
+  <img src="http://michaelschulte.github.io/RBootcamp/_session/IntroToR/image/RGoogleScholar" height="450">
+</p>
+]
+
+---
 # R is so popular because
 
 There are many good reasons to prefer R over superficially more user friendly software such as **Excel** or **SPSS** or more complex programming languages like **C++** or **Python**. 
