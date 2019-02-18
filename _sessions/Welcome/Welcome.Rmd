@@ -34,6 +34,7 @@ layout: true
   </div> 
 
 ---
+
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 options(width=110)
@@ -55,10 +56,10 @@ knitr::opts_chunk$set(fig.align = 'center')
 ]
 ---
 
+# Schedule and Materials
 
 .pull-left45[
 <br><br><br><br><br>
-#  Schedule and Materials
 
 Click the "Start Bootcamp" link in Ilias!
 
@@ -75,8 +76,6 @@ Click the "Start Bootcamp" link in Ilias!
 ]
 
 ---
-
-
 
 .pull-left6[
 
@@ -98,9 +97,10 @@ Click the "Start Bootcamp" link in Ilias!
 ]
 
 ---
-<br><br>
-.pull-left5[
+
 # Schedule 
+
+.pull-left5[
 
 We have an <high>ambitious schedule</high>!
 
@@ -122,10 +122,9 @@ Each session contains a slide-based <high>introduction</high> and a hands-on <hi
 
 ---
 
+# Introduction
 
 .pull-left45[
-
-# Introduction
 
 <high>15 - 45 minutes</high> slide based introduction to help you understand the basic concepts, including:
 
@@ -165,9 +164,9 @@ Each session contains a slide-based <high>introduction</high> and a hands-on <hi
 
 ---
 
-.pull-left45[
-
 # Practicals
+
+.pull-left45[
 
 <high>Write your own R scripts!</high>
 
@@ -232,10 +231,9 @@ Each session contains a slide-based <high>introduction</high> and a hands-on <hi
 
 ---
 
-.pull-left4[
-
-<br><br>
 # Breaks
+
+.pull-left4[
 
 1 - Feel free to take breaks when you need them. 
 
@@ -256,8 +254,9 @@ Each session contains a slide-based <high>introduction</high> and a hands-on <hi
 
 ---
 
-.pull-left45[
 # Introductions
+
+.pull-left45[
 
 1. What is your name?
 
@@ -283,7 +282,34 @@ Each session contains a slide-based <high>introduction</high> and a hands-on <hi
 
 .pull-right50[
 
-<p align="center"><br><br><br><br>
+<p align="center">
+<img src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/introductions.jpg" style="width:500px">
+<br>
+<font style="font-size:10px">from <a href="www.artofmanliness.com">artofmanliness.com</a></font>
+</p>
+
+]
+---
+
+# Groups of 2
+
+.pull-left45[
+
+1. Form groups of 2
+
+2. Think about a cool name for your group
+
+3. Got to <a href="https://mattermost.imucb.ch/signup_user_complete/?id=x4khtds97by7zgond1xu38ashe">Mattermost</a> (Mattermost is a chat plattform we will use to communicate)
+
+4. Each of you (two) register an account
+
+5. Post your groupname + member names into the public channel
+
+]
+
+.pull-right50[
+
+<p align="center">
 <img src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/introductions.jpg" style="width:500px">
 <br>
 <font style="font-size:10px">from <a href="www.artofmanliness.com">artofmanliness.com</a></font>
