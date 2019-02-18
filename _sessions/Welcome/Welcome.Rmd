@@ -298,7 +298,7 @@ Each session contains a slide-based <high>introduction</high> and a hands-on <hi
 
 <p align="center">
   <font size=8><hfont><high>Questions?</high></hfont></font><br>
-  <font size = 4><a href = "https://dwulff.github.io/Intro2R_Unibe/">Link to schedule</a></font>
+  <font size = 4><a href = "https://michaelschulte.github.io/RBootcamp/">Link to schedule</a></font>
 </p>
 
 ]
@@ -306,7 +306,7 @@ Each session contains a slide-based <high>introduction</high> and a hands-on <hi
 .pull-right6[
 
 <br><br>
-<iframe src="https://dwulff.github.io/Intro2R_Unibe/" width="500" height="500"></iframe>
+<iframe src="https://michaelschulte.github.io/RBootcamp/" width="500" height="500"></iframe>
 
 ]
 
