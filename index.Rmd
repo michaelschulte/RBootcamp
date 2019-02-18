@@ -3,7 +3,7 @@ title: Overview
 output:
   html_document:
     css: index.css
-    self_contained: FALSE
+    self_contained: no
     includes:
       in_header: header.html
       #before_body: doc_prefix.html
