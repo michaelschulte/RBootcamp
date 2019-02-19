@@ -66,8 +66,7 @@ Click the "Start Bootcamp" link in Ilias!
 
 .pull-right5[
 
-&lt;br&gt;&lt;br&gt;
-&lt;iframe src="https://dwulff.github.io/Intro2R_Unibe/" width="500" height="500"&gt;&lt;/iframe&gt;
+&lt;iframe src="https://michaelschulte.github.io/RBootcamp/" width="500" height="500"&gt;&lt;/iframe&gt;
 
 ]
 
@@ -81,7 +80,7 @@ Click the "Start Bootcamp" link in Ilias!
 # Aim
 
 
-&gt;###The aim of this workshop is enable you to thoughtfully and actively use R. You will learn the fundamentals of the R language, as well as cutting-edge packages for wrangling, analyzing, and communicating statistical data.  
+&gt;###The aim of this course is to enable you to thoughtfully and actively use R. You will learn the fundamentals of the R language, as well as cutting-edge packages for wrangling, analyzing, and communicating statistical data.  
 
 ]
 
@@ -96,23 +95,25 @@ Click the "Start Bootcamp" link in Ilias!
 
 # Schedule 
 
-.pull-left5[
+.pull-left4[
 
 We have an &lt;high&gt;ambitious schedule&lt;/high&gt;!
 
-3 days, &lt;high&gt;3 sessions per day&lt;/high&gt;, &lt;high&gt;2 hours per session&lt;/high&gt;, on a variety of topics.
+We will meet in a different location (nearly) every time.
 
 Each session contains a slide-based &lt;high&gt;introduction&lt;/high&gt; and a hands-on &lt;high&gt;programming practical&lt;/high&gt;
+
+You will have tasks to finish inbetween sessions and a final project to attend to.
 
 &lt;br&gt;
 
 
 ]
 
-.pull-right4[
+.pull-right5[
 
-&lt;p align="center"&gt;&lt;img src="image/schedule.png"&gt;&lt;/p&gt;
-&lt;center&gt;&lt;font size = 3&gt;&lt;/font&gt;&lt;/center&gt;
+&lt;p align="center"&gt;&lt;img src="image/location.png" width="500"&gt;&lt;/p&gt;
+
 
 ]
 
@@ -133,7 +134,7 @@ Each session contains a slide-based &lt;high&gt;introduction&lt;/high&gt; and a 
 &lt;high&gt;All available online&lt;/high&gt;. Follow along, and don't worry about memorizing
 
 &lt;br&gt;&lt;br&gt;
-&lt;a href="https://therbootcamp.github.io/Intro2DataScience_2018Oct/"&gt;This is a Link to our materials&lt;/a&gt;.
+&lt;a href="https://michaelschulte.github.io/RBootcamp/"&gt;This is a Link to our materials&lt;/a&gt;.
 &lt;br&gt;&lt;br&gt;
 
 &lt;high&gt;Be interactive! Ask questions!&lt;/high&gt;
@@ -141,13 +142,6 @@ Each session contains a slide-based &lt;high&gt;introduction&lt;/high&gt; and a 
 ]
 
 .pull-right55[
-
-&lt;p align="center"&gt;
-&lt;img src="https://img.freepik.com/free-vector/business-presentation_23-2147511785.jpg?size=338&amp;ext=jpg" style="width:250px"&gt;
-&lt;br&gt;
-&lt;font style="font-size:10px"&gt;from &lt;a href="www.Freepik.com"&gt;Freepik.com&lt;/a&gt;&lt;/font&gt;
-&lt;/p&gt;
-
 &lt;p align="center"&gt;
 &lt;img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5DZ7eRkgxeFuEMEtuVC9YHz2v0STxeQ9YJyW2T3PbXGIci_2Lig" style="width:250px"&gt;
 &lt;br&gt;
@@ -358,7 +352,6 @@ Each session contains a slide-based &lt;high&gt;introduction&lt;/high&gt; and a 
 
 ]
     </textarea>
-<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
@@ -369,53 +362,12 @@ Each session contains a slide-based &lt;high&gt;introduction&lt;/high&gt; and a 
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
 });
-(function(d) {
-  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
   if (!r) return;
   s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
   d.head.appendChild(s);
-})(document);
-
-(function(d) {
-  var el = d.getElementsByClassName("remark-slides-area");
-  if (!el) return;
-  var slide, slides = slideshow.getSlides(), els = el[0].children;
-  for (var i = 1; i < slides.length; i++) {
-    slide = slides[i];
-    if (slide.properties.continued === "true" || slide.properties.count === "false") {
-      els[i - 1].className += ' has-continuation';
-    }
-  }
-  var s = d.createElement("style");
-  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
-  d.head.appendChild(s);
-})(document);
-// delete the temporary CSS (for displaying all slides initially) when the user
-// starts to view slides
-(function() {
-  var deleted = false;
-  slideshow.on('beforeShowSlide', function(slide) {
-    if (deleted) return;
-    var sheets = document.styleSheets, node;
-    for (var i = 0; i < sheets.length; i++) {
-      node = sheets[i].ownerNode;
-      if (node.dataset["target"] !== "print-only") continue;
-      node.parentNode.removeChild(node);
-    }
-    deleted = true;
-  });
 })();</script>
-
-<script>
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-</script>
 
 <script>
 (function() {
