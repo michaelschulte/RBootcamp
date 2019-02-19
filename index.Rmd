@@ -19,7 +19,7 @@ output:
 27.3|Recap| Plotting II <br><!---[slides](_sessions/PlottingII/PlottingII.html), [practical](_sessions/PlottingII/PlottingII_practical.html)-->|Reporting<br><!---[slides](_sessions/Reporting/Reporting.html), [practical](_sessions/Reporting/Reporting_practical.html)-->||
 3.4|Recap|Case Studies<!---<br>[Intro](_sessions/CaseStudies/CaseStudies.html)<br>[1: Clinical Trial](_sessions/CaseStudies/Clinical_Data_Case_Study.html)<br>[2: Finance ](_sessions/CaseStudies/Financial_Data_Case_Study.html) -->|Final Project||
 1.5|Final Presentations||||
-
+|||||
 
 
 <!---

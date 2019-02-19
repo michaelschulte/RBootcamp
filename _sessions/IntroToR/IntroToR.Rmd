@@ -900,7 +900,7 @@ See also <a href="http://style.tidyverse.org/">style.tidyverse.org/</a>
 
 class: middle, center
 
-<h1><a href="https://michaelschulte.github.io/Intro2R_Unibe/1_Data/RBootcamp_Package1.zip">Downloads</a></h1>
+<h1><a href="https://michaelschulte.github.io/RBootcamp/1_Data/RBootcamp_Package1.zip">Downloads</a></h1>
 
 ---
 
