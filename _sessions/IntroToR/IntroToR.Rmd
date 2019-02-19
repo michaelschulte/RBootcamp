@@ -144,7 +144,7 @@ In many sciences it becomes the de factor **lingua franca** for statistics.
 
 .pull-right6[
 <p align="center">
-  <img src="http://michaelschulte.github.io/RBootcamp/_session/IntroToR/image/RGoogleScholar.jpeg" height="450">
+  <img src="http://michaelschulte.github.io/RBootcamp/_sessions/IntroToR/image/RGoogleScholar.jpeg" height="450">
 </p>
 ]
 
