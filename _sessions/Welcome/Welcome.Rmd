@@ -146,8 +146,6 @@ Each session contains a slide-based <high>introduction</high> and a hands-on <hi
 
 .pull-right55[
 
-<br>
-
 <p align="center">
 <img src="https://img.freepik.com/free-vector/business-presentation_23-2147511785.jpg?size=338&ext=jpg" style="width:250px">
 <br>
@@ -184,11 +182,10 @@ Each session contains a slide-based <high>introduction</high> and a hands-on <hi
 
 
 .pull-right5[
-<br>
 
-  <iframe src="https://dwulff.github.io/Intro2R_Unibe/_sessions/Data/Data_practical.html" height="480px" width = "500px"></iframe>
+  <iframe src="https://michaelschulte.github.io/Intro2R_Unibe/_sessions/Data/Data_practical.html" height="480px" width = "500px"></iframe>
 
-  Example practical:<a href="https://dwulff.github.io/Intro2R_Unibe/_sessions/Data/Data_practical.html"> Data </a>
+  Example practical:<a href="https://michaelschulte.github.io/Intro2R_Unibe/_sessions/Data/Data_practical.html"> Data </a>
 
 ]
 
@@ -243,7 +240,7 @@ Each session contains a slide-based <high>introduction</high> and a hands-on <hi
 
 .pull-right6[
 
-<p align="center"><br><br><br><br>
+<p align="center">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/275px-A_small_cup_of_coffee.JPG" height="400" vspace="10">
 <br>
 <font style="font-size:10px">from <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/275px-A_small_cup_of_coffee.JPG">Tibits.ch</a></font>
@@ -318,6 +315,35 @@ Each session contains a slide-based <high>introduction</high> and a hands-on <hi
 ]
 
 ---
+
+# Expectations
+
+.pull-left45[
+
+1. Active participation, asking questions, talk to each other!
+
+2. Finish parcticals (during course - rest at home)
+
+3. Be prepared to do a recap of last course (~15 minutes)
+
+4. Final Project coding + presentation (in RMarkdown) of final project
+
+]
+
+.pull-right45[
+
+![](image/expectation.jpg)
+<p align="center">
+<font style="font-size:10px">from <a href="http://www.dopeame.com">www.dopeame.com</a></font>
+</p>
+]
+
+
+---
+
+
+
+
 
 .pull-left35[
 <br><br><br><br><br><br><br><br><br>
