@@ -1,36 +1,14 @@
 ---
-title: "Wrangling"
-author: "
-<table style='table-layout:fixed;width:100%;border:0;padding:0;margin:0'><col width='10%'><col width='10%'>
-  <tr style='border:none'>
-    <td style='display:block;width:100%;text-align:left;vertical-align:bottom;padding:0;margin:0;border:none' nowrap>
-      <font style='font-style:normal'>Introduction to R</font><br>
-      <a href='https://dwulff.github.io/Intro2R_Unibe/'>
-        <i class='fas fa-clock' style='font-size:.9em;' ></i>
-      </a>
-      <a href='https://therbootcamp.github.io'>
-        <i class='fas fa-home' style='font-size:.9em;'></i>
-      </a>
-      <a href='mailto:therbootcamp@gmail.com'>
-        <i class='fas fa-envelope' style='font-size: .9em;'></i>
-      </a>
-      <a href='https://www.linkedin.com/company/basel-r-bootcamp/'>
-        <i class='fab fa-linkedin' style='font-size: .9em;'></i>
-      </a>
-      <a href='https://therbootcamp.github.io'>
-        <font style='font-style:normal'>Bern R Bootcamp</font>
-      </a>
-    </td>
-    <td style='width:100%;vertical-align:bottom;text-align:right;padding:0;margin:0;border:none'>
-      <img src='https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/by-sa.png' style='height:15px;width:80px'/>
-    </td>
-  </tr>
-</table>"
+title: "Wrangling Practical"
+subtitle: ""
+author: Michael Schulte-Mecklenbeck
 output:
   html_document:
     css: practical.css
     self_contained: no
+
 ---
+
 
 ```{r setup, echo = FALSE}
 knitr::opts_chunk$set(comment = NA, 
@@ -73,7 +51,7 @@ By the end of this practical you will know how to:
 
 ### A - Setup
 
-1. Open your `BernRBootcamp` R project. It should already have the folders `1_Data` and `2_Code`. Make sure that the data files listed in the `Datasets` section above are in your `1_Data` folder
+1. Open your `RBootcamp` R project. It should already have the folders `1_Data` and `2_Code`. Make sure that the data files listed in the `Datasets` section above are in your `1_Data` folder
 
 ```{r}
 # Done!
@@ -541,77 +519,6 @@ trial_B <- trial_act %>%
 
 trial_B
 ```
-
-## Examples
-
-```{r, eval = FALSE, echo = TRUE}
-
-# Wrangling with dplyr and tidyr ---------------------------
-
-library(tidyverse)    # Load tidyverse for dplyr and tidyr
-
-# Load baselers data
-baselers <- read_csv("https://raw.githubusercontent.com/therbootcamp/baselers/master/inst/extdata/baselers.txt")
-
-# Perform many dplyr operations in a row
-
-baselers %>%
-  
-  # Change some names
-  rename(age_y = age,
-         swimming = rhine) %>%
-  
-  # Only include people over 30
-  filter(age_y > 30) %>%
-  
-  # Calculate some new columns
-  mutate(weight_lbs = weight * 2.22,
-         height_m = height / 100,
-         BMI = weight / height_m ^ 2,
-         
-         # Make binary version of sex
-         sex_bin = case_when(
-                      sex == "male" ~ 0,
-                      sex == "female" ~ 1),
-
-        # Show when height is greater than 150
-        height_lt_150 = case_when(
-                                height < 150 ~ 1,
-                                height >= 150 ~ 0)) %>%
-  
-  # Sort in ascending order of sex, then
-  #  descending order of age
-  arrange(sex, desc(age_y)))
-
-# TIPP -------
-# In this practical you will do many operations on dataframes. Remember: when using `dplyr`, you can chain
-# multiple functions together with the pipe `%>%`. When giving your answers to the questions in this practical,
-# see how many operations you can chain with the pipe!
-
-baselers <- read_csv("1_Data/baselers.csv")
-
-# Method 1: Separate operations
-
-baselers <- baselers %>%
-              rename(Age_y = age)   # Change age to Age__y
-
-baselers <- baselers %>%
-              mutate(food_p = food / income)  # calculate food_p
-
-baselers <- baselers %>%
-              filter(sex == "m")    # Only include males
-
-# Method 2: Chain with the pipe!
-
-baselers <- read_csv("1_Data/baselers.csv")
-
-baselers <- baselers %>%
-              rename(Age_y = age) %>%             # Change age to Age__y
-              mutate(food_p = food / income) %>%  # calculate food_p
-              filter(sex == "m")                  # Only include males
-
-```
-
 
 ## Datasets
 

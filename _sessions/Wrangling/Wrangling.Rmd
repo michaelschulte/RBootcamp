@@ -3,22 +3,9 @@ title: "Wrangling"
 author: "
   Introduction to R<br>
   <a href='https://therbootcamp.github.io'>
-    Bern R Bootcamp
-  </a>
-  <br>
-  <a href='https://dwulff.github.io/Intro2R_Unibe/'>
-    <i class='fas fa-clock' style='font-size:.9em;'></i>
-  </a>&#8239; 
-  <a href='https://therbootcamp.github.io'>
-    <i class='fas fa-home' style='font-size:.9em;' ></i>
-  </a>&#8239;
-  <a href='mailto:therbootcamp@gmail.com'>
-    <i class='fas fa-envelope' style='font-size: .9em;'></i>
-  </a>&#8239;
-  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'>
-    <i class='fab fa-linkedin' style='font-size: .9em;'></i>
+    R Bootcamp
   </a>"
-date: "February 2019"
+date: "FS 2019"
 output:
   xaringan::moon_reader:
     css: ["default", "baselrbootcamp.css"]
@@ -44,12 +31,6 @@ layout: true
         </font>
       </span>
     </a>
-    <a href="https://therbootcamp.github.io/">
-      <font color="#7E7E7E">
-       Introduction to R | February 2019
-      </font>
-    </a>
-    </span>
   </div> 
 
 ---
@@ -996,5 +977,5 @@ long_combined %>%
 
 class: middle, center
 
-<h1><a href="https://dwulff.github.io/Intro2R_Unibe/_sessions/Wrangling/Wrangling_practical.html">Practical</a></h1>
+<h1><a href="https://michaelschulte.github.io/RBootcamp/_sessions/Wrangling/Wrangling_practical.html">Practical</a></h1>
 

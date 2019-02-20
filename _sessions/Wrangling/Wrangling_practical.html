@@ -9,9 +9,10 @@
 <meta name="generator" content="pandoc" />
 
 
+<meta name="author" content="Michael Schulte-Mecklenbeck" />
 
 
-<title>Wrangling</title>
+<title>Wrangling Practical</title>
 
 <script src="Wrangling_practical_files/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -97,6 +98,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -104,9 +108,70 @@ button.code-folding-btn:focus {
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
@@ -116,24 +181,12 @@ $(document).ready(function () {
 
 
 
-
 <div class="fluid-row" id="header">
 
 
 
-<h1 class="title toc-ignore">Wrangling</h1>
-<h4 class="author"><em><table style='table-layout:fixed;width:100%;border:0;padding:0;margin:0'>
-<col width='10%'>
-<col width='10%'>
-<tr style="border:none">
-<td style="display:block;width:100%;text-align:left;vertical-align:bottom;padding:0;margin:0;border:none" nowrap>
-<font style='font-style:normal'>Introduction to R</font><br> <a href='https://dwulff.github.io/Intro2R_Unibe/'> <i class='fas fa-clock' style='font-size:.9em;' ></i> </a> <a href='https://therbootcamp.github.io'> <i class='fas fa-home' style='font-size:.9em;'></i> </a> <a href='mailto:therbootcamp@gmail.com'> <i class='fas fa-envelope' style='font-size: .9em;'></i> </a> <a href='https://www.linkedin.com/company/basel-r-bootcamp/'> <i class='fab fa-linkedin' style='font-size: .9em;'></i> </a> <a href='https://therbootcamp.github.io'> <font style='font-style:normal'>Bern R Bootcamp</font> </a>
-</td>
-<td style="width:100%;vertical-align:bottom;text-align:right;padding:0;margin:0;border:none">
-<img src='https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/by-sa.png' style='height:15px;width:80px'/>
-</td>
-</tr>
-</table></em></h4>
+<h1 class="title toc-ignore">Wrangling Practical</h1>
+<h4 class="author"><em>Michael Schulte-Mecklenbeck</em></h4>
 
 </div>
 
@@ -338,7 +391,7 @@ trial_act &lt;- trial_act %&gt;%
 CD4_wide</code></pre>
 <pre><code># A tibble: 2,139 x 5
    pidnum  arms  cd40 cd420 cd496
-    &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;
+    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
  1  10056     2   422   477   660
  2  10059     3   162   218    NA
  3  10089     3   326   274   122
@@ -349,13 +402,13 @@ CD4_wide</code></pre>
  8  10190     0   401   366   453
  9  10198     3   214   107     8
 10  10229     0   221   132    NA
-# ... with 2,129 more rows</code></pre>
+# … with 2,129 more rows</code></pre>
 <p>Our goal is to convert this data to a ‘long’ format, where each row represents a single CD4 T cell count for a specific patient, like this:</p>
 <pre class="r"><code># This is the same data in &#39;long&#39; format
 CD4_long</code></pre>
 <pre><code># A tibble: 6,417 x 4
    pidnum  arms time  value
-    &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;int&gt;
+    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;
  1  10056     2 cd40    422
  2  10059     3 cd40    162
  3  10089     3 cd40    326
@@ -366,7 +419,7 @@ CD4_long</code></pre>
  8  10190     0 cd40    401
  9  10198     3 cd40    214
 10  10229     0 cd40    221
-# ... with 6,407 more rows</code></pre>
+# … with 6,407 more rows</code></pre>
 <ol style="list-style-type: decimal">
 <li>Using the <code>gather()</code> function, create a new dataframe called <code>CD4_long</code> that shows the <code>CD4_wide</code> data in the ‘long’ format. To do this, use the following template. Set the grouping column to <code>time</code> and the new data column to <code>value</code>.</li>
 </ol>
@@ -401,72 +454,6 @@ CD4_long</code></pre>
 <li>Only drug users</li>
 </ul>
 </div>
-</div>
-<div id="examples" class="section level2">
-<h2>Examples</h2>
-<pre class="r"><code># Wrangling with dplyr and tidyr ---------------------------
-
-library(tidyverse)    # Load tidyverse for dplyr and tidyr
-
-# Load baselers data
-baselers &lt;- read_csv(&quot;https://raw.githubusercontent.com/therbootcamp/baselers/master/inst/extdata/baselers.txt&quot;)
-
-# Perform many dplyr operations in a row
-
-baselers %&gt;%
-  
-  # Change some names
-  rename(age_y = age,
-         swimming = rhine) %&gt;%
-  
-  # Only include people over 30
-  filter(age_y &gt; 30) %&gt;%
-  
-  # Calculate some new columns
-  mutate(weight_lbs = weight * 2.22,
-         height_m = height / 100,
-         BMI = weight / height_m ^ 2,
-         
-         # Make binary version of sex
-         sex_bin = case_when(
-                      sex == &quot;male&quot; ~ 0,
-                      sex == &quot;female&quot; ~ 1),
-
-        # Show when height is greater than 150
-        height_lt_150 = case_when(
-                                height &lt; 150 ~ 1,
-                                height &gt;= 150 ~ 0)) %&gt;%
-  
-  # Sort in ascending order of sex, then
-  #  descending order of age
-  arrange(sex, desc(age_y)))
-
-# TIPP -------
-# In this practical you will do many operations on dataframes. Remember: when using `dplyr`, you can chain
-# multiple functions together with the pipe `%&gt;%`. When giving your answers to the questions in this practical,
-# see how many operations you can chain with the pipe!
-
-baselers &lt;- read_csv(&quot;1_Data/baselers.csv&quot;)
-
-# Method 1: Separate operations
-
-baselers &lt;- baselers %&gt;%
-              rename(Age_y = age)   # Change age to Age__y
-
-baselers &lt;- baselers %&gt;%
-              mutate(food_p = food / income)  # calculate food_p
-
-baselers &lt;- baselers %&gt;%
-              filter(sex == &quot;m&quot;)    # Only include males
-
-# Method 2: Chain with the pipe!
-
-baselers &lt;- read_csv(&quot;1_Data/baselers.csv&quot;)
-
-baselers &lt;- baselers %&gt;%
-              rename(Age_y = age) %&gt;%             # Change age to Age__y
-              mutate(food_p = food / income) %&gt;%  # calculate food_p
-              filter(sex == &quot;m&quot;)                  # Only include males</code></pre>
 </div>
 <div id="datasets" class="section level2">
 <h2>Datasets</h2>
