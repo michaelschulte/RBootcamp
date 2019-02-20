@@ -267,10 +267,9 @@ You will have tasks to finish inbetween sessions and a final project to attend t
 
 ]
 
-.pull-right50[
-
+.pull-right45[
 <p align="center">
-<img src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/introductions.jpg" style="width:500px">
+<img src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/introductions.jpg" style="width:450px">
 <br>
 <font style="font-size:10px">from <a href="www.artofmanliness.com">artofmanliness.com</a></font>
 </p>
@@ -295,12 +294,11 @@ You will have tasks to finish inbetween sessions and a final project to attend t
 
 ]
 
-.pull-right50[
-
+.pull-right45[
 <p align="center">
-<img src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/introductions.jpg" style="width:500px">
+<img src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/introductions.jpg" style="width:450px">
 <br>
-<font style="font-size:10px">from <a href="http://artofmanliness.com">artofmanliness.com</a></font>
+<font style="font-size:10px">from <a href="www.artofmanliness.com">artofmanliness.com</a></font>
 </p>
 
 ]
@@ -313,7 +311,7 @@ You will have tasks to finish inbetween sessions and a final project to attend t
 
 1. Active participation, asking questions, talk to each other!
 
-2. Finish parcticals (during course - rest at home)
+2. Finish parcticals (during course - rest at home) and upload before next session (see below).
 
 3. Be prepared to do a recap of last course (~15 minutes)
 
@@ -331,9 +329,15 @@ You will have tasks to finish inbetween sessions and a final project to attend t
 
 ---
 
+class: middle, center
 
+<h1><a href="https://www.dropbox.com/request/0dkjxxU3A8eYDCGKQNu1">Upload</a></h1>
 
+Naming: SessionX_LASTNAME.zip (you can simply zip your **RBootcamp** folder)
 
+Deadline: Tuesday, before courseday, 12:00 (Noon)
+
+---
 
 .pull-left35[
 <br><br><br><br><br><br><br><br><br>
