@@ -299,7 +299,7 @@ require(package_name)
 
 .pull-left4[
 1. <high>Everything is an object</high>
-2. <high>Use `<-` to create/change objects</high>
+2. <high>Use <- to create/change objects</high>
 3. <high>Name objects using `_`</high>
 4. Objects have classes
 5. Everything happens through functions

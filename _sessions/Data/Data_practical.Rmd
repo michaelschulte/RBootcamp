@@ -1,32 +1,7 @@
 ---
-title: "Data"
+title: "Data Practical"
 subtitle: ""
-author: "
-<table style='table-layout:fixed;width:100%;border:0;padding:0;margin:0'><col width='10%'><col width='10%'>
-  <tr style='border:none'>
-    <td style='display:block;width:100%;text-align:left;vertical-align:bottom;padding:0;margin:0;border:none' nowrap>
-      <font style='font-style:normal'>Introduction to R</font><br>
-      <a href='https://dwulff.github.io/Intro2R_Unibe/'>
-        <i class='fas fa-clock' style='font-size:.9em;' ></i>
-      </a>
-      <a href='https://therbootcamp.github.io'>
-        <i class='fas fa-home' style='font-size:.9em;'></i>
-      </a>
-      <a href='mailto:therbootcamp@gmail.com'>
-        <i class='fas fa-envelope' style='font-size: .9em;'></i>
-      </a>
-      <a href='https://www.linkedin.com/company/basel-r-bootcamp/'>
-        <i class='fab fa-linkedin' style='font-size: .9em;'></i>
-      </a>
-      <a href='https://therbootcamp.github.io'>
-        <font style='font-style:normal'>Bern R Bootcamp</font>
-      </a>
-    </td>
-    <td style='width:100%;vertical-align:bottom;text-align:right;padding:0;margin:0;border:none'>
-      <img src='https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/by-sa.png' style='height:15px;width:80px'/>
-    </td>
-  </tr>
-</table>"
+author: Michael Schulte-Mecklenbeck
 output:
   html_document:
     css: practical.css
@@ -74,7 +49,7 @@ In this practical you'll learn how to work with basic data objects and functions
 
 ### A - Getting setup
 
-1. Open your `BernRBootcamp` R project. It should already have the folders `1_Data` and `2_Code`.
+1. Open your `RBootcamp` R project. It should already have the folders `1_Data` and `2_Code`.
 
 2. Open a new R script and save it as a new file called `data_practical.R` in the `2_Code` folder. At the top of the script, using comments, write your name and the date. 
 Then, load all package(s) listed in the Packages section above with `library()`. Make sure that each of the datasets listed above lie in your `1_Data` folder.
@@ -675,92 +650,6 @@ mean(ten_tibble$age[ten_tibble$weight > 80])
 # Mean age of baselers heavier than 80kg
 ten_tibble$id[ten_tibble$sex == "male" & ten_tibble$height < 165]
 ```
-
-## Examples
-
-```{r, eval = FALSE, echo = TRUE}
-library(tidyverse)
-library(readr)
-library(readxl)
-library(haven)
-
-# Create vectors of (fake) stock data
-name      <- c("apple", "microsoft", "dell", "google", "twitter")
-yesterday <- c(100, 89, 65, 54, 89)
-today     <- c(102, 85, 72, 60, 95)
-
-# Summary statistics
-mean(today)
-mean(yesterday)
-
-# Show classes
-class(name)
-class(yesterday)
-
-# Operations of vectors
-change <- today - yesterday
-change # Print result
-
-# Create a logical vector from two numerics
-increase <- today > yesterday
-increase # Print result
-
-# Create a tibble combining multiple vectors
-stocks <- tibble(name, yesterday, today, change, increase)
-
-# Get column names
-names(stocks)
-
-# Access columns by name
-stocks$name
-stocks$today
-
-# Calculate descriptives on columns
-mean(stocks$yesterday)
-median(stocks$today)
-table(stocks$increase)
-max(stocks$increase)
-
-
-# read/write delim-separated -------------------
-
-# read chickens data
-chickens <- read_csv(file = "1_Data/chickens.csv")
-
-# fix header of chickens_nohead.csv with known column names
-chickens <- read_csv(file = "1_Data/chickens_nohead.csv",
-                     col_names = c("weight", "time", "chick", "diet"))
-
-# fix NA values of chickens_na.csv
-chickens <- read_csv(file = "1_Data/chickens_na.csv",
-                     na = c('NA', 'NULL'))
-
-# write clean data to disc
-write_csv(x = chickens, 
-          path = "1_Data/chickens_clean.csv")
-
-# fix types -------------------
-# Note: the survey data is fictional!
-
-# remove character from rating
-survey$rating[survey$rating == "2,1"] <- 2.1
-
-# rerun type convert
-survey <- type_convert(survey)
-
-# other formats -------------------
-
-# .xlsx (Excel)
-chickens <- read_excel("1_Data/chickens.xlsx")
-
-# .sav (SPSS)
-chickens <- read_spss("1_Data/chickens.sav")
-
-# .sad7bdata (SAS)
-chickens <- read_sas("1_Data/chickens.sas7bdat")
-
-```
-
 
 ## Datasets
 

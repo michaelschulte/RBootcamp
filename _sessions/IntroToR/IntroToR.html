@@ -280,7 +280,7 @@ require(package_name)
 
 .pull-left4[
 1. &lt;high&gt;Everything is an object&lt;/high&gt;
-2. &lt;high&gt;Use `&lt;-` to create/change objects&lt;/high&gt;
+2. &lt;high&gt;Use &lt;- to create/change objects&lt;/high&gt;
 3. &lt;high&gt;Name objects using `_`&lt;/high&gt;
 4. Objects have classes
 5. Everything happens through functions
@@ -995,7 +995,7 @@ See also &lt;a href="http://style.tidyverse.org/"&gt;style.tidyverse.org/&lt;/a&
 
 class: middle, center
 
-&lt;h1&gt;&lt;a href="https://dwulff.github.io/Intro2R_Unibe/1_Data/BernRBootcamp_Day1.zip"&gt;Downloads&lt;/a&gt;&lt;/h1&gt;
+&lt;h1&gt;&lt;a href="https://michaelschulte.github.io/Intro2R_Unibe/1_Data/RBootcamp_Package1.zip"&gt;Downloads&lt;/a&gt;&lt;/h1&gt;
 
 ---
 
@@ -1004,7 +1004,6 @@ class: middle, center
 &lt;h1&gt;&lt;a&gt;Interactive&lt;/a&gt;&lt;/h1&gt;
 &lt;h2&gt;Open RStudio&lt;/h2&gt;
     </textarea>
-<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
@@ -1015,53 +1014,12 @@ class: middle, center
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
 });
-(function(d) {
-  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
   if (!r) return;
   s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
   d.head.appendChild(s);
-})(document);
-
-(function(d) {
-  var el = d.getElementsByClassName("remark-slides-area");
-  if (!el) return;
-  var slide, slides = slideshow.getSlides(), els = el[0].children;
-  for (var i = 1; i < slides.length; i++) {
-    slide = slides[i];
-    if (slide.properties.continued === "true" || slide.properties.count === "false") {
-      els[i - 1].className += ' has-continuation';
-    }
-  }
-  var s = d.createElement("style");
-  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
-  d.head.appendChild(s);
-})(document);
-// delete the temporary CSS (for displaying all slides initially) when the user
-// starts to view slides
-(function() {
-  var deleted = false;
-  slideshow.on('beforeShowSlide', function(slide) {
-    if (deleted) return;
-    var sheets = document.styleSheets, node;
-    for (var i = 0; i < sheets.length; i++) {
-      node = sheets[i].ownerNode;
-      if (node.dataset["target"] !== "print-only") continue;
-      node.parentNode.removeChild(node);
-    }
-    deleted = true;
-  });
 })();</script>
-
-<script>
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-</script>
 
 <script>
 (function() {
