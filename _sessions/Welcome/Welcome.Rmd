@@ -177,7 +177,7 @@ You will have tasks to finish inbetween sessions and a final project to attend t
 
 .pull-right5[
 
-  <iframe src="https://michaelschulte.github.io/Intro2R_Unibe/_sessions/Data/Data_practical.html" height="480px" width = "500px"></iframe>
+  <iframe src="https://michaelschulte.github.io/RBootcamp/_sessions/Data/Data_practical.html" height="480px" width = "500px"></iframe>
 
   Example practical:<a href="https://michaelschulte.github.io/RBootcamp/_sessions/Data/Data_practical.html"> Data </a>
 
