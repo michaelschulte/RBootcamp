@@ -144,7 +144,7 @@ In many sciences it becomes the de factor **lingua franca** for statistics.
 
 .pull-right6[
 <p align="center">
-  <img src="http://michaelschulte.github.io/RBootcamp/_session/IntroToR/image/RGoogleScholar.jpeg" height="450">
+  <img src="http://michaelschulte.github.io/RBootcamp/_sessions/IntroToR/image/RGoogleScholar.jpeg" height="450">
 </p>
 ]
 
@@ -900,7 +900,7 @@ See also <a href="http://style.tidyverse.org/">style.tidyverse.org/</a>
 
 class: middle, center
 
-<h1><a href="https://michaelschulte.github.io/Intro2R_Unibe/1_Data/RBootcamp_Package1.zip">Downloads</a></h1>
+<h1><a href="https://michaelschulte.github.io/RBootcamp/1_Data/RBootcamp_Package1.zip">Downloads</a></h1>
 
 ---
 

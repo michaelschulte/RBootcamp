@@ -147,7 +147,7 @@ You will have tasks to finish inbetween sessions and a final project to attend t
 
 .pull-right55[
 <p align="center">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5DZ7eRkgxeFuEMEtuVC9YHz2v0STxeQ9YJyW2T3PbXGIci_2Lig" style="width:250px">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5DZ7eRkgxeFuEMEtuVC9YHz2v0STxeQ9YJyW2T3PbXGIci_2Lig" style="width:400px">
 <br>
 <font style="font-size:10px">from <a href="www.Freepik.com">Freepik.com</a></font>
 </p>
@@ -177,9 +177,9 @@ You will have tasks to finish inbetween sessions and a final project to attend t
 
 .pull-right5[
 
-  <iframe src="https://michaelschulte.github.io/Intro2R_Unibe/_sessions/Data/Data_practical.html" height="480px" width = "500px"></iframe>
+  <iframe src="https://michaelschulte.github.io/RBootcamp/_sessions/Data/Data_practical.html" height="480px" width = "500px"></iframe>
 
-  Example practical:<a href="https://michaelschulte.github.io/Intro2R_Unibe/_sessions/Data/Data_practical.html"> Data </a>
+  Example practical:<a href="https://michaelschulte.github.io/RBootcamp/_sessions/Data/Data_practical.html"> Data </a>
 
 ]
 
@@ -265,21 +265,17 @@ You will have tasks to finish inbetween sessions and a final project to attend t
 
 8. Mac or PC?
 
-9. Beer or wine?
-
-10. Berlin or Paris?
-
 ]
 
-.pull-right50[
-
+.pull-right45[
 <p align="center">
-<img src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/introductions.jpg" style="width:500px">
+<img src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/introductions.jpg" style="width:450px">
 <br>
 <font style="font-size:10px">from <a href="www.artofmanliness.com">artofmanliness.com</a></font>
 </p>
 
 ]
+
 ---
 
 # Groups of 2
@@ -298,10 +294,9 @@ You will have tasks to finish inbetween sessions and a final project to attend t
 
 ]
 
-.pull-right50[
-
+.pull-right45[
 <p align="center">
-<img src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/introductions.jpg" style="width:500px">
+<img src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/introductions.jpg" style="width:450px">
 <br>
 <font style="font-size:10px">from <a href="www.artofmanliness.com">artofmanliness.com</a></font>
 </p>
@@ -316,7 +311,7 @@ You will have tasks to finish inbetween sessions and a final project to attend t
 
 1. Active participation, asking questions, talk to each other!
 
-2. Finish parcticals (during course - rest at home)
+2. Finish parcticals (during course - rest at home) and upload before next session (see below).
 
 3. Be prepared to do a recap of last course (~15 minutes)
 
@@ -332,12 +327,17 @@ You will have tasks to finish inbetween sessions and a final project to attend t
 </p>
 ]
 
-
 ---
 
+class: middle, center
 
+<h1><a href="https://www.dropbox.com/request/0dkjxxU3A8eYDCGKQNu1">Upload</a></h1>
 
+Naming: SessionX_LASTNAME.zip (you can simply zip your **RBootcamp** folder)
 
+Deadline: Tuesday, before courseday, 12:00 (Noon)
+
+---
 
 .pull-left35[
 <br><br><br><br><br><br><br><br><br>
