@@ -9,7 +9,7 @@ username: RBootcamp
 user_description: We teach R.
 user_title: R you ready?
 email: michael@schulte-mecklenbeck.com
-include: ['_sessions', '_tutorials','_materials','_sessions/_css','_sessions/_image']
+include: ['_sessions', '_tutorials','_materials','_sessions/_css','_sessions/_image','1_Data']
 
 # Google-analytics
 # google-analytics:
