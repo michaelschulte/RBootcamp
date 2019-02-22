@@ -37,7 +37,7 @@ layout: true
   
 ```{r, eval = FALSE, echo = FALSE, message=FALSE}
 # Code to knit slides
-xaringan::inf_mr('_sessions/D1S2_Wrangling/Wrangling.Rmd')
+xaringan::inf_mr('_sessions/StatisticsI/StatisticsI.Rmd')
 baselers <- read_csv("https://raw.githubusercontent.com/therbootcamp/baselers/master/inst/extdata/baselers.txt")
 ```
 
@@ -647,8 +647,15 @@ wilcox.test(baselers$happiness,
 
 ---
 
+class: middle, center
+
+<h1><a href="https://michaelschulte.github.io/RBootcamp/1_Data/kc_house.csv">Download</a></h1>
+
+Put the file into `1/Data` !!
+---
+
 
 class: middle, center
 
-<h1><a href="https://dwulff.github.io/Intro2R_Unibe/_sessions/StatisticsI/StatisticsI_practical.html">Practical</a></h1>
+<h1><a href="https://michaelschulte.github.io/RBootcamp/_sessions/StatisticsI/StatisticsI_practical.html">Practical</a></h1>
 
