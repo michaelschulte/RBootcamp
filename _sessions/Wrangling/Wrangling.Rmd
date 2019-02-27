@@ -867,7 +867,7 @@ combined %>%
 
 Some functions require data to be in a certain shape, that is to be either in a wide or a long format.
 
-Use <high>`gather()`</high> and <high>`spread()`</high> from the `tidyr`package to change a tibble between <high>wide</high> and <high>long</high> formats.
+Use <high>`gather()`</high> and <high>`spread()`</high> from the `tidyr` package to change a tibble between <high>wide</high> and <high>long</high> formats.
 
 <br>
 
