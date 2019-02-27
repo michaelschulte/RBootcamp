@@ -6,3 +6,7 @@ groups <- c('Rlicious', 'RAnajas', 'RAS', 'RStudis')
 
 # sample a group
 sample(groups, 1)
+
+
+
+
