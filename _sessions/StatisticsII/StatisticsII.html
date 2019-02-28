@@ -3,7 +3,7 @@
   <head>
     <title>Statistics II</title>
     <meta charset="utf-8">
-    <meta name="author" content="Introduction to R   Bern R Bootcamp" />
+    <meta name="author" content="Introduction to R   R Bootcamp" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link rel="stylesheet" href="baselrbootcamp.css" type="text/css" />
   </head>
@@ -12,11 +12,10 @@
 class: center, middle, inverse, title-slide
 
 # Statistics II
-### Introduction to R<br> <a href='https://therbootcamp.github.io'> Bern R Bootcamp </a> <br> <a href='https://dwulff.github.io/Intro2R_Unibe/'> <i class='fas fa-clock' style='font-size:.9em;'></i> </a>  <a href='https://therbootcamp.github.io'> <i class='fas fa-home' style='font-size:.9em;' ></i> </a>  <a href='mailto:therbootcamp@gmail.com'> <i class='fas fa-envelope' style='font-size: .9em;'></i> </a>  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'> <i class='fab fa-linkedin' style='font-size: .9em;'></i> </a>
-### February 2019
+### Introduction to R<br> <a href='https://therbootcamp.github.io'> R Bootcamp </a>
+### FS 2019
 
 ---
-
 
 layout: true
 
@@ -32,12 +31,6 @@ layout: true
         &lt;/font&gt;
       &lt;/span&gt;
     &lt;/a&gt;
-    &lt;a href="https://therbootcamp.github.io/"&gt;
-      &lt;font color="#7E7E7E"&gt;
-       Introduction to R | February 2019
-      &lt;/font&gt;
-    &lt;/a&gt;
-    &lt;/span&gt;
   &lt;/div&gt; 
 
 ---
@@ -65,7 +58,7 @@ layout: true
     &lt;td&gt; (Generalized) mixed-linear models &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;td&gt; &lt;mono&gt;stan_glm()&lt;/mono&gt; &lt;/td&gt;
+    &lt;td&gt; &lt;mono&gt;regressionBF()&lt;/mono&gt; &lt;/td&gt;
     &lt;td&gt; Bayesian (gen.) linear models &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
@@ -275,11 +268,7 @@ lm(formula = income ~ age*height,
 ## 
 ## Coefficients:
 ## (Intercept)          age       height   age:height  
-<<<<<<< HEAD
-##     27.1339     164.5202       4.2136      -0.0796
-=======
-##   -4557.496      228.464       32.214       -0.478
->>>>>>> 5f63859195d07bbdd10ccc177ad9e909a5ff3505
+##   -1439.828      185.591       13.986       -0.223
 ```
 
 &lt;br&gt;
@@ -292,11 +281,7 @@ lm(formula = income ~ age*height,
 ## 
 ## Coefficients:
 ## (Intercept)          age       height   age:height  
-<<<<<<< HEAD
-##     27.1339     164.5202       4.2136      -0.0796
-=======
-##   -4557.496      228.464       32.214       -0.478
->>>>>>> 5f63859195d07bbdd10ccc177ad9e909a5ff3505
+##   -1439.828      185.591       13.986       -0.223
 ```
 
 
@@ -332,37 +317,20 @@ summary(my_lm)
 ## 
 ## Residuals:
 ##    Min     1Q Median     3Q    Max 
-<<<<<<< HEAD
-##  -4177   -846      5    814   3819 
+##  -3633   -873    -83    834   3402 
 ## 
 ## Coefficients:
 ##              Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)   27.1339  1665.2478    0.02     0.99    
-## age          164.5202    34.4881    4.77  2.2e-06 ***
-## height         4.2136     9.7622    0.43     0.67    
-## age:height    -0.0796     0.2023   -0.39     0.69    
+## (Intercept) -1439.828   1690.177   -0.85     0.39    
+## age           185.591     36.774    5.05  5.5e-07 ***
+## height         13.986      9.836    1.42     0.16    
+## age:height     -0.223      0.214   -1.04     0.30    
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 1200 on 840 degrees of freedom
-## Multiple R-squared:  0.799,	Adjusted R-squared:  0.799 
-## F-statistic: 1.12e+03 on 3 and 840 DF,  p-value: &lt;2e-16
-=======
-##  -3705   -815     21    805   4330 
-## 
-## Coefficients:
-##              Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept) -4557.496   1665.694   -2.74  0.00635 ** 
-## age           228.464     34.759    6.57  8.7e-11 ***
-## height         32.214      9.695    3.32  0.00093 ***
-## age:height     -0.478      0.203   -2.35  0.01895 *  
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-## 
-## Residual standard error: 1190 on 838 degrees of freedom
-## Multiple R-squared:  0.806,	Adjusted R-squared:  0.806 
-## F-statistic: 1.16e+03 on 3 and 838 DF,  p-value: &lt;2e-16
->>>>>>> 5f63859195d07bbdd10ccc177ad9e909a5ff3505
+## Residual standard error: 1240 on 833 degrees of freedom
+## Multiple R-squared:  0.779,	Adjusted R-squared:  0.778 
+## F-statistic:  980 on 3 and 833 DF,  p-value: &lt;2e-16
 ```
 
 ]
@@ -413,11 +381,7 @@ my_lm$coefficients
 
 ```
 ## (Intercept)         age      height  age:height 
-<<<<<<< HEAD
-##    27.13390   164.52019     4.21365    -0.07961
-=======
-##  -4557.4960    228.4641     32.2135     -0.4777
->>>>>>> 5f63859195d07bbdd10ccc177ad9e909a5ff3505
+##  -1439.8276    185.5913     13.9857     -0.2233
 ```
 
 ```r
@@ -426,27 +390,15 @@ my_lm$residuals
 ```
 
 ```
-<<<<<<< HEAD
-##         1         2         3         4         5 
-##  2528.268  -903.684  1372.656 -1324.612  -722.963 
-##         6         7         8         9        10 
-##  1224.138 -1378.356     3.574  -698.069 -2038.029 
-##        11        12        13        14        15 
-##  2653.648  1653.492   211.200  -524.399   216.216 
-##        16        17        18        19        20 
-##   886.419  -919.953   443.967  -364.201   743.919 
-##  [ reached getOption("max.print") -- omitted 824 entries ]
-=======
 ##        1        2        3        4        5 
-##   742.88  1252.54   233.13  -131.95  -494.65 
+##   881.31   549.40  -125.26  2118.08  1288.10 
 ##        6        7        8        9       10 
-##   733.37  1693.13  -752.92 -1151.55   440.27 
+##   352.92  -167.71   981.62 -1875.02   576.88 
 ##       11       12       13       14       15 
-##   306.79  -602.30   -57.23  -947.87 -1202.70 
+## -1063.81   966.56  -655.40  1047.41  -642.54 
 ##       16       17       18       19       20 
-##   417.47   635.19   921.92 -2009.94  2920.85 
-##  [ reached getOption("max.print") -- omitted 822 entries ]
->>>>>>> 5f63859195d07bbdd10ccc177ad9e909a5ff3505
+##  1515.64    54.42    24.82 -1420.00   267.80 
+##  [ reached getOption("max.print") -- omitted 817 entries ]
 ```
 
 ]
@@ -519,19 +471,11 @@ my_glm
 ## 
 ## Coefficients:
 ## (Intercept)          age       height   age:height  
-<<<<<<< HEAD
-##   -2.13e+01    -3.77e-02     1.25e-01     2.07e-04  
+##   -2.14e+01    -7.79e-02     1.27e-01     3.98e-04  
 ## 
-## Degrees of Freedom: 843 Total (i.e. Null);  840 Residual
-## Null Deviance:	    1170 
-## Residual Deviance: 844 	AIC: 852
-=======
-##   -1.74e+01    -7.83e-02     1.01e-01     4.73e-04  
-## 
-## Degrees of Freedom: 841 Total (i.e. Null);  838 Residual
-## Null Deviance:	    1170 
-## Residual Deviance: 885 	AIC: 893
->>>>>>> 5f63859195d07bbdd10ccc177ad9e909a5ff3505
+## Degrees of Freedom: 836 Total (i.e. Null);  833 Residual
+## Null Deviance:	    1160 
+## Residual Deviance: 794 	AIC: 802
 ```
 
 ]
@@ -566,18 +510,11 @@ anova(my_an)
 ## Analysis of Variance Table
 ## 
 ## Response: income
-##                   Df   Sum Sq Mean Sq F value Pr(&gt;F)
-<<<<<<< HEAD
-## education          3 4.07e+06 1357301    0.19   0.90
-## height             1 4.45e+03    4451    0.00   0.98
-## education:height   3 2.18e+07 7282295    1.02   0.38
-## Residuals        836 5.98e+09 7148900
-=======
-## education          3 1.29e+06  429490    0.06   0.98
-## height             1 5.44e+06 5435705    0.74   0.39
-## education:height   3 9.97e+06 3323304    0.45   0.72
-## Residuals        834 6.16e+09 7384484
->>>>>>> 5f63859195d07bbdd10ccc177ad9e909a5ff3505
+##                   Df   Sum Sq  Mean Sq F value Pr(&gt;F)
+## education          3 3.22e+07 10733785    1.56   0.20
+## height             1 8.60e+05   859805    0.12   0.72
+## education:height   3 1.97e+07  6580897    0.95   0.41
+## Residuals        829 5.72e+09  6899652
 ```
 
 ]
@@ -617,39 +554,21 @@ my_an
 ## 
 ## Coefficients:
 ##                       (Intercept)  
-<<<<<<< HEAD
-##                           7143.28  
+##                           6200.61  
 ##        educationobligatory_school  
-##                           -648.35  
+##                           -834.49  
 ##                   educationSEK_II  
-##                          -7250.41  
+##                            434.55  
 ##                  educationSEK_III  
-##                           2048.89  
+##                           3791.24  
 ##                            height  
-##                              2.21  
+##                              7.34  
 ## educationobligatory_school:height  
-##                              2.75  
+##                              7.55  
 ##            educationSEK_II:height  
-##                             43.29  
+##                             -4.37  
 ##           educationSEK_III:height  
-##                            -12.42
-=======
-##                            9705.3  
-##        educationobligatory_school  
-##                           -3192.4  
-##                   educationSEK_II  
-##                            2465.3  
-##                  educationSEK_III  
-##                           -2218.3  
-##                            height  
-##                             -12.8  
-## educationobligatory_school:height  
-##                              18.1  
-##            educationSEK_II:height  
-##                             -14.3  
-##           educationSEK_III:height  
-##                              13.1
->>>>>>> 5f63859195d07bbdd10ccc177ad9e909a5ff3505
+##                            -23.09
 ```
 
 ]
@@ -696,57 +615,30 @@ summary(m)
 ## Formula: income ~ age * height + (1 | eyecor)
 ##    Data: baselers
 ## 
-<<<<<<< HEAD
-## REML criterion at convergence: 14340
+## REML criterion at convergence: 14275
 ## 
 ## Scaled residuals: 
-##    Min     1Q Median     3Q    Max 
-## -3.488 -0.706  0.004  0.680  3.189 
+##     Min      1Q  Median      3Q     Max 
+## -2.9370 -0.7057 -0.0667  0.6739  2.7500 
 ## 
 ## Random effects:
 ##  Groups   Name        Variance Std.Dev.
 ##  eyecor   (Intercept)       0     0    
-##  Residual             1433978  1197    
-## Number of obs: 844, groups:  eyecor, 2
+##  Residual             1530296  1237    
+## Number of obs: 837, groups:  eyecor, 2
 ## 
 ## Fixed effects:
 ##              Estimate Std. Error t value
-## (Intercept)   27.1339  1665.2478    0.02
-## age          164.5202    34.4881    4.77
-## height         4.2136     9.7622    0.43
-## age:height    -0.0796     0.2023   -0.39
+## (Intercept) -1439.828   1690.177   -0.85
+## age           185.591     36.774    5.05
+## height         13.986      9.836    1.42
+## age:height     -0.223      0.214   -1.04
 ## 
 ## Correlation of Fixed Effects:
 ##            (Intr) age    height
 ## age        -0.940              
 ## height     -0.997  0.938       
-## age:height  0.937 -0.997 -0.940
-=======
-## REML criterion at convergence: 14302
-## 
-## Scaled residuals: 
-##    Min     1Q Median     3Q    Max 
-## -3.102 -0.683  0.018  0.674  3.625 
-## 
-## Random effects:
-##  Groups   Name        Variance Std.Dev.
-##  eyecor   (Intercept) 1.97e-12 1.40e-06
-##  Residual             1.43e+06 1.19e+03
-## Number of obs: 842, groups:  eyecor, 2
-## 
-## Fixed effects:
-##              Estimate Std. Error t value
-## (Intercept) -4557.496   1665.694   -2.74
-## age           228.464     34.759    6.57
-## height         32.214      9.695    3.32
-## age:height     -0.478      0.203   -2.35
-## 
-## Correlation of Fixed Effects:
-##            (Intr) age    height
-## age        -0.937              
-## height     -0.997  0.937       
-## age:height  0.933 -0.997 -0.937
->>>>>>> 5f63859195d07bbdd10ccc177ad9e909a5ff3505
+## age:height  0.936 -0.997 -0.940
 ## fit warnings:
 ## Some predictor variables are on very different scales: consider rescaling
 ## convergence code: 0
@@ -788,15 +680,9 @@ summary(my_bm)
 ```
 ## Bayes factor analysis
 ## --------------
-<<<<<<< HEAD
-## [1] age          : 2.149e+291 ±0.01%
-## [2] height       : 0.07697    ±0.01%
-## [3] age + height : 4.665e+289 ±0%
-=======
-## [1] age          : 5.665e+293 ±0.01%
-## [2] height       : 0.1099     ±0%
-## [3] age + height : 1.888e+294 ±0%
->>>>>>> 5f63859195d07bbdd10ccc177ad9e909a5ff3505
+## [1] age          : 1.039e+271 ±0.01%
+## [2] height       : 0.08355    ±0%
+## [3] age + height : 5.467e+269 ±0%
 ## 
 ## Against denominator:
 ##   Intercept only 
@@ -833,11 +719,7 @@ my_lm
 ## 
 ## Coefficients:
 ## (Intercept)          age       height   age:height  
-<<<<<<< HEAD
-##     27.1339     164.5202       4.2136      -0.0796
-=======
-##   -4557.496      228.464       32.214       -0.478
->>>>>>> 5f63859195d07bbdd10ccc177ad9e909a5ff3505
+##   -1439.828      185.591       13.986       -0.223
 ```
 
 
@@ -850,21 +732,12 @@ tidy(my_lm)
 
 ```
 ## # A tibble: 4 x 5
-<<<<<<< HEAD
-##   term         estimate std.error statistic    p.value
-##   &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;
-## 1 (Intercept)   27.1     1665.       0.0163 0.987     
-## 2 age          165.        34.5      4.77   0.00000217
-## 3 height         4.21       9.76     0.432  0.666     
-## 4 age:height    -0.0796     0.202   -0.393  0.694
-=======
-##   term         estimate std.error statistic  p.value
-##   &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
-## 1 (Intercept) -4557.     1666.        -2.74 6.35e- 3
-## 2 age           228.       34.8        6.57 8.68e-11
-## 3 height         32.2       9.70       3.32 9.31e- 4
-## 4 age:height     -0.478     0.203     -2.35 1.90e- 2
->>>>>>> 5f63859195d07bbdd10ccc177ad9e909a5ff3505
+##   term         estimate std.error statistic     p.value
+##   &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;
+## 1 (Intercept) -1440.     1690.       -0.852 0.395      
+## 2 age           186.       36.8       5.05  0.000000552
+## 3 height         14.0       9.84      1.42  0.155      
+## 4 age:height     -0.223     0.214    -1.04  0.298
 ```
 
 ]
@@ -875,8 +748,9 @@ tidy(my_lm)
 
 class: middle, center
 
-&lt;h1&gt;&lt;a href="https://dwulff.github.io/Intro2R_Unibe/_sessions/StatisticsI/StatisticsI_practical.html"&gt;Practical&lt;/a&gt;&lt;/h1&gt;
+&lt;h1&gt;&lt;a href="https://dwulff.github.io/Intro2R_Unibe/_sessions/StatisticsII/StatisticsII_practical.html"&gt;Practical&lt;/a&gt;&lt;/h1&gt;
     </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
@@ -887,12 +761,53 @@ class: middle, center
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
 });
-(function() {
-  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
   if (!r) return;
   s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
   d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
 })();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
 
 <script>
 (function() {
