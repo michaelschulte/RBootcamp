@@ -268,7 +268,7 @@ lm(formula = income ~ age*height,
 ## 
 ## Coefficients:
 ## (Intercept)          age       height   age:height  
-##   -1439.828      185.591       13.986       -0.223
+##   -610.1936     162.1173       7.3079      -0.0409
 ```
 
 &lt;br&gt;
@@ -281,7 +281,7 @@ lm(formula = income ~ age*height,
 ## 
 ## Coefficients:
 ## (Intercept)          age       height   age:height  
-##   -1439.828      185.591       13.986       -0.223
+##   -610.1936     162.1173       7.3079      -0.0409
 ```
 
 
@@ -317,20 +317,20 @@ summary(my_lm)
 ## 
 ## Residuals:
 ##    Min     1Q Median     3Q    Max 
-##  -3633   -873    -83    834   3402 
+##  -3879   -859      5    825   4180 
 ## 
 ## Coefficients:
 ##              Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept) -1439.828   1690.177   -0.85     0.39    
-## age           185.591     36.774    5.05  5.5e-07 ***
-## height         13.986      9.836    1.42     0.16    
-## age:height     -0.223      0.214   -1.04     0.30    
+## (Intercept) -610.1936  1674.5133   -0.36     0.72    
+## age          162.1173    36.5068    4.44    1e-05 ***
+## height         7.3079     9.8145    0.74     0.46    
+## age:height    -0.0409     0.2144   -0.19     0.85    
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 1240 on 833 degrees of freedom
-## Multiple R-squared:  0.779,	Adjusted R-squared:  0.778 
-## F-statistic:  980 on 3 and 833 DF,  p-value: &lt;2e-16
+## Residual standard error: 1230 on 847 degrees of freedom
+## Multiple R-squared:  0.814,	Adjusted R-squared:  0.813 
+## F-statistic: 1.23e+03 on 3 and 847 DF,  p-value: &lt;2e-16
 ```
 
 ]
@@ -381,7 +381,7 @@ my_lm$coefficients
 
 ```
 ## (Intercept)         age      height  age:height 
-##  -1439.8276    185.5913     13.9857     -0.2233
+##  -610.19357   162.11727     7.30787    -0.04093
 ```
 
 ```r
@@ -390,15 +390,15 @@ my_lm$residuals
 ```
 
 ```
-##        1        2        3        4        5 
-##   881.31   549.40  -125.26  2118.08  1288.10 
-##        6        7        8        9       10 
-##   352.92  -167.71   981.62 -1875.02   576.88 
-##       11       12       13       14       15 
-## -1063.81   966.56  -655.40  1047.41  -642.54 
-##       16       17       18       19       20 
-##  1515.64    54.42    24.82 -1420.00   267.80 
-##  [ reached getOption("max.print") -- omitted 817 entries ]
+##       1       2       3       4       5       6 
+##  -249.3  -553.1  -432.8   341.0 -1374.8 -2626.5 
+##       7       8       9      10      11      12 
+## -1369.5  -313.7  -398.3  -975.6 -1593.3  1924.3 
+##      13      14      15      16      17      18 
+##  1665.5  -376.4  -956.7   361.4  1316.1  -401.6 
+##      19      20 
+##  -134.3  2080.9 
+##  [ reached getOption("max.print") -- omitted 831 entries ]
 ```
 
 ]
@@ -471,11 +471,11 @@ my_glm
 ## 
 ## Coefficients:
 ## (Intercept)          age       height   age:height  
-##   -2.14e+01    -7.79e-02     1.27e-01     3.98e-04  
+##   -2.29e+01     4.39e-02     1.35e-01    -2.77e-04  
 ## 
-## Degrees of Freedom: 836 Total (i.e. Null);  833 Residual
-## Null Deviance:	    1160 
-## Residual Deviance: 794 	AIC: 802
+## Degrees of Freedom: 850 Total (i.e. Null);  847 Residual
+## Null Deviance:	    1180 
+## Residual Deviance: 880 	AIC: 888
 ```
 
 ]
@@ -511,10 +511,17 @@ anova(my_an)
 ## 
 ## Response: income
 ##                   Df   Sum Sq  Mean Sq F value Pr(&gt;F)
-## education          3 3.22e+07 10733785    1.56   0.20
-## height             1 8.60e+05   859805    0.12   0.72
-## education:height   3 1.97e+07  6580897    0.95   0.41
-## Residuals        829 5.72e+09  6899652
+## education          3 5.29e+07 17634999    2.20  0.087
+## height             1 2.03e+05   203176    0.03  0.874
+## education:height   3 9.91e+06  3304263    0.41  0.745
+##                   
+## education        .
+## height            
+## education:height  
+##  [ reached getOption("max.print") -- omitted 1 row ]
+## ---
+## Signif. codes:  
+## 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
 
 ]
@@ -554,21 +561,21 @@ my_an
 ## 
 ## Coefficients:
 ##                       (Intercept)  
-##                           6200.61  
+##                           6911.02  
 ##        educationobligatory_school  
-##                           -834.49  
+##                           -474.32  
 ##                   educationSEK_II  
-##                            434.55  
+##                          -2437.74  
 ##                  educationSEK_III  
-##                           3791.24  
+##                           2825.80  
 ##                            height  
-##                              7.34  
+##                              2.87  
 ## educationobligatory_school:height  
-##                              7.55  
+##                              5.10  
 ##            educationSEK_II:height  
-##                             -4.37  
+##                             11.43  
 ##           educationSEK_III:height  
-##                            -23.09
+##                            -14.34
 ```
 
 ]
@@ -615,30 +622,30 @@ summary(m)
 ## Formula: income ~ age * height + (1 | eyecor)
 ##    Data: baselers
 ## 
-## REML criterion at convergence: 14275
+## REML criterion at convergence: 14499
 ## 
 ## Scaled residuals: 
-##     Min      1Q  Median      3Q     Max 
-## -2.9370 -0.7057 -0.0667  0.6739  2.7500 
+##    Min     1Q Median     3Q    Max 
+## -3.164 -0.701  0.004  0.673  3.409 
 ## 
 ## Random effects:
 ##  Groups   Name        Variance Std.Dev.
 ##  eyecor   (Intercept)       0     0    
-##  Residual             1530296  1237    
-## Number of obs: 837, groups:  eyecor, 2
+##  Residual             1503404  1226    
+## Number of obs: 851, groups:  eyecor, 2
 ## 
 ## Fixed effects:
 ##              Estimate Std. Error t value
-## (Intercept) -1439.828   1690.177   -0.85
-## age           185.591     36.774    5.05
-## height         13.986      9.836    1.42
-## age:height     -0.223      0.214   -1.04
+## (Intercept) -610.1936  1674.5133   -0.36
+## age          162.1173    36.5068    4.44
+## height         7.3079     9.8145    0.74
+## age:height    -0.0409     0.2144   -0.19
 ## 
 ## Correlation of Fixed Effects:
 ##            (Intr) age    height
 ## age        -0.940              
-## height     -0.997  0.938       
-## age:height  0.936 -0.997 -0.940
+## height     -0.997  0.939       
+## age:height  0.937 -0.998 -0.940
 ## fit warnings:
 ## Some predictor variables are on very different scales: consider rescaling
 ## convergence code: 0
@@ -680,9 +687,9 @@ summary(my_bm)
 ```
 ## Bayes factor analysis
 ## --------------
-## [1] age          : 1.039e+271 ±0.01%
-## [2] height       : 0.08355    ±0%
-## [3] age + height : 5.467e+269 ±0%
+## [1] age          : 6.488e+306 ±0.01%
+## [2] height       : 0.07699    ±0%
+## [3] age + height : 5.233e+305 ±0%
 ## 
 ## Against denominator:
 ##   Intercept only 
@@ -719,7 +726,7 @@ my_lm
 ## 
 ## Coefficients:
 ## (Intercept)          age       height   age:height  
-##   -1439.828      185.591       13.986       -0.223
+##   -610.1936     162.1173       7.3079      -0.0409
 ```
 
 
@@ -732,12 +739,12 @@ tidy(my_lm)
 
 ```
 ## # A tibble: 4 x 5
-##   term         estimate std.error statistic     p.value
-##   &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;
-## 1 (Intercept) -1440.     1690.       -0.852 0.395      
-## 2 age           186.       36.8       5.05  0.000000552
-## 3 height         14.0       9.84      1.42  0.155      
-## 4 age:height     -0.223     0.214    -1.04  0.298
+##   term         estimate std.error statistic   p.value
+##   &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+## 1 (Intercept) -610.      1675.       -0.364 0.716    
+## 2 age          162.        36.5       4.44  0.0000102
+## 3 height         7.31       9.81      0.745 0.457    
+## 4 age:height    -0.0409     0.214    -0.191 0.849
 ```
 
 ]
@@ -748,7 +755,15 @@ tidy(my_lm)
 
 class: middle, center
 
-&lt;h1&gt;&lt;a href="https://dwulff.github.io/Intro2R_Unibe/_sessions/StatisticsII/StatisticsII_practical.html"&gt;Practical&lt;/a&gt;&lt;/h1&gt;
+&lt;h1&gt;&lt;a href="https://michaelschulte.github.io/RBootcamp/1_Data/RBootcamp_Package2.zip"&gt;Download&lt;/a&gt;&lt;/h1&gt;
+
+Put the files into `1/Data` !!
+
+---
+
+class: middle, center
+
+&lt;h1&gt;&lt;a href="https://michaelschulte.github.io/RBootcamp/_sessions/StatisticsII/StatisticsII_practical.html"&gt;Practical&lt;/a&gt;&lt;/h1&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

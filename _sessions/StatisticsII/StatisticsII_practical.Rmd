@@ -59,7 +59,7 @@ gap <- read_csv("1_Data/gap.csv")
 
 ### A - Getting setup
 
-1. Open your `BernRBootcamp` R project. It should already have the folders `1_Data` and `2_Code`. Make sure that all of the data files listed in the `Datasets` section are contained in the `1_Data` folder.
+1. Open your `RBootcamp` R project. It should already have the folders `1_Data` and `2_Code`. Make sure that all of the data files listed in the `Datasets` section are contained in the `1_Data` folder.
 
 ```{r}
 # Done!
@@ -375,6 +375,21 @@ colMeans(as.matrix(post))
 ```
 
 4. Compare the estimate of the effect of GDP per capita on child mortality from the Bayesian method to the one from the standard `lm()`. How similar are they? 
+
+### H - Angry sports
+	
+Consider the dataset `1_Data/angry.Rdata` which contains data from a study investigating how athletes and non-athletes deal with anger. 78 Students were tested, 53 were athletes and 25 were non-athletes. All of the participants filled in a questionnaire about mood. 
+
+The dataset contains the following variables:
+<br>
+<img width="100%" src="image/Spielberger1999.png" margin=0>
+
+
+For our questions we will focus on the Expression (AE) variable. Answer the following questions by applying the appropriate statistical tests and show your results graphically:
+
+1. Do athletes and non-athletes deal with anger in the same way?
+2. Are there any gender differences? 
+3. How do female/male athletes compare to female/male non-athletes?  
 
 ## Examples
 

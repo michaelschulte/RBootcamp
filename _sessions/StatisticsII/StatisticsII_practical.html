@@ -210,7 +210,7 @@ $(document).ready(function () {
 <div id="a---getting-setup" class="section level3">
 <h3>A - Getting setup</h3>
 <ol style="list-style-type: decimal">
-<li><p>Open your <code>BernRBootcamp</code> R project. It should already have the folders <code>1_Data</code> and <code>2_Code</code>. Make sure that all of the data files listed in the <code>Datasets</code> section are contained in the <code>1_Data</code> folder.</p></li>
+<li><p>Open your <code>RBootcamp</code> R project. It should already have the folders <code>1_Data</code> and <code>2_Code</code>. Make sure that all of the data files listed in the <code>Datasets</code> section are contained in the <code>1_Data</code> folder.</p></li>
 <li><p>Open a new R script and save it as a new file called <code>statisticsII_practical.R</code> in the <code>2_Code</code> folder. At the top of the script, using comments, write your name and the date. The, load the set of packages listed in the <code>Functions</code> section with <code>library()</code>.</p></li>
 <li><p>For this practical, we’ll use the <code>gap.csv</code> data. This dataset contains data from three years on economic and health variables of 139 countries. Using the following template, load the data into R and store it as a new object called <code>gap</code>.</p></li>
 </ol>
@@ -343,6 +343,17 @@ post &lt;- posterior(mort_blm, iterations = 1000)
 colMeans(as.matrix(post))</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>Compare the estimate of the effect of GDP per capita on child mortality from the Bayesian method to the one from the standard <code>lm()</code>. How similar are they?</li>
+</ol>
+</div>
+<div id="h---angry-sports" class="section level3">
+<h3>H - Angry sports</h3>
+<p>Consider the dataset <code>1_Data/angry.Rdata</code> which contains data from a study investigating how athletes and non-athletes deal with anger. 78 Students were tested, 53 were athletes and 25 were non-athletes. All of the participants filled in a questionnaire about mood.</p>
+<p>The dataset contains the following variables: <br> <img width="100%" src="image/Spielberger1999.png" margin=0></p>
+<p>For our questions we will focus on the Expression (AE) variable. Answer the following questions by applying the appropriate statistical tests and show your results graphically:</p>
+<ol style="list-style-type: decimal">
+<li>Do athletes and non-athletes deal with anger in the same way?</li>
+<li>Are there any gender differences?</li>
+<li>How do female/male athletes compare to female/male non-athletes?</li>
 </ol>
 </div>
 </div>

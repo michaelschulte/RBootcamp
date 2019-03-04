@@ -1122,7 +1122,7 @@ ggplot(data = mpg,
 
 class: middle, center
 
-<h1><a href="https://dwulff.github.io/Intro2R_Unibe/_sessions/PlottingI/PlottingI_practical.html">Practical</a></h1>
+<h1><a href="https://michaelschulte.github.io/RBootcamp/_sessions/PlottingI/PlottingI_practical.html">Practical</a></h1>
 
 
 

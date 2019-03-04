@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Michael Schulte-Mecklenbeck" />
+
+
+<title>Statistics I Practical</title>
+
+<script src="StatisticsI_practical_solutions_files/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="StatisticsI_practical_solutions_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="StatisticsI_practical_solutions_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="StatisticsI_practical_solutions_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="StatisticsI_practical_solutions_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="StatisticsI_practical_solutions_files/navigation-1.1/tabsets.js"></script>
+<link href="StatisticsI_practical_solutions_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="StatisticsI_practical_solutions_files/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="practical.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Statistics I Practical</h1>
+<h4 class="author"><em>Michael Schulte-Mecklenbeck</em></h4>
+
+</div>
+
+
+<p align="center">
+<img width="100%" src="image/forsale.png" margin=0><br> <font style="font-size:10px">adapted from <a href="http://www.trueloveproperty.co.uk/houses-sale-ingham/">trueloveproperty.co.uk</a></font>
+</p>
+<div id="section" class="section level1 tabset tabset-fade">
+<h1></h1>
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>In this practical, you’ll practice grouping and analysing data with the <code>dplyr</code> and <code>tidyr</code> packages (part of the `tidyverse collection of packages).</p>
+<p>By the end of this practical you will know how to:</p>
+<ol style="list-style-type: decimal">
+<li>Group data and calculate summary statistics</li>
+<li>Run simple statistical analyses</li>
+</ol>
+</div>
+<div id="tasks" class="section level2">
+<h2>Tasks</h2>
+<div id="a---setup" class="section level3">
+<h3>A - Setup</h3>
+<ol style="list-style-type: decimal">
+<li>Open your <code>RBootcamp</code> R project. It should already have the folders <code>1_Data</code> and <code>2_Code</code>. Make sure that the data files listed in the <code>Datasets</code> section above are in your <code>1_Data</code> folder.</li>
+</ol>
+<pre class="r"><code># Done!</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Open a new R script. At the top of the script, using comments, write your name and the date. Save it as a new file called <code>statisticsI_practical.R</code> in the <code>2_Code</code> folder.<br />
+</li>
+<li>Using <code>library()</code> load the set of packages for this practical listed in the packages section above.</li>
+</ol>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>For this practical, we’ll use the <code>kc_house.csv</code> data. This dataset contains house sale prices for King County, Washington. It includes homes sold between May 2014 and May 2015. Using the following template, load the data into R and store it as a new object called <code>kc_house</code>.</li>
+</ol>
+<pre class="r"><code>kc_house &lt;- read_csv(file = &quot;XX&quot;)</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Using <code>print()</code>, <code>summary()</code>, and <code>head()</code>, explore the data to make sure it was loaded correctly.</li>
+</ol>
+<pre class="r"><code>kc_house
+summary(kc_house)
+head(kc_house)</code></pre>
+</div>
+<div id="b---recap" class="section level3">
+<h3>B - Recap</h3>
+<ol style="list-style-type: decimal">
+<li>Print the names of the <code>kc_house</code> data with <code>names()</code>.</li>
+</ol>
+<pre class="r"><code>names(kc_house)</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Change the following column names using <code>rename()</code>.</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="left">New Name</th>
+<th align="left">Old Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">living_sqft</td>
+<td align="left">sqft_living</td>
+</tr>
+<tr class="even">
+<td align="left">lot_sqft</td>
+<td align="left">sqft_lot</td>
+</tr>
+<tr class="odd">
+<td align="left">above_sqft</td>
+<td align="left">sqft_above</td>
+</tr>
+<tr class="even">
+<td align="left">basement_sqft</td>
+<td align="left">sqft_basement</td>
+</tr>
+<tr class="odd">
+<td align="left">built_yr</td>
+<td align="left">yr_built</td>
+</tr>
+<tr class="even">
+<td align="left">renovated_yr</td>
+<td align="left">yr_renovated</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>kc_house &lt;- kc_house %&gt;%
+  rename(NEW = OLD,
+         NEW = OLD,
+         NEW = OLD)</code></pre>
+<pre class="r"><code>kc_house &lt;- kc_house %&gt;%
+  rename(living_sqft = sqft_living,
+         lot_sqft = sqft_lot,
+         above_sqft = sqft_above,
+         basement_sqft = sqft_basement,
+         built_yr = yr_built,
+         renovated_yr = yr_renovated)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Create new column(s) <code>living_sqm</code>, <code>lot_sqm</code>, <code>above_sqm</code> and <code>basement_sqm</code> which show the respective room sizes in square meters rather than square feet (Hint: Multiply each by 0.093).</li>
+</ol>
+<pre class="r"><code>kc_house &lt;- kc_house %&gt;%
+  mutate(living_sqm = XXX * XXX,
+         lot_sqm = XXX * XXX,
+         XXX = XXX,
+         XXX = XXX)</code></pre>
+<pre class="r"><code>kc_house &lt;- kc_house %&gt;%
+  mutate(living_sqm = living_sqft * 0.093,
+         lot_sqm = lot_sqft * 0.093,
+         above_sqm = above_sqft * 0.093,
+         basement_sqm  = basement_sqft * 0.093)</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Add a new variable to the dataframe called <code>mansion</code> which is “Yes” when the <em>sum</em> of the house’s living, above, and basement space is above 750 square meters.</li>
+</ol>
+<pre class="r"><code>kc_house &lt;- kc_house %&gt;%
+                mutate(XXX = case_when(
+                              XXX + XXX + XXX &gt; XXX ~ &quot;XXX&quot;,
+                              XXXX + XXX + XXX &lt;= XXX ~ &quot;XXX&quot;))</code></pre>
+<pre class="r"><code>kc_house &lt;- kc_house %&gt;%
+                mutate(mansion = case_when(
+                              living_sqm + above_sqm +  basement_sqm &gt; 750 ~ &quot;Yes&quot;,
+                              living_sqm + above_sqm + basement_sqm &lt;= 750 ~ &quot;No&quot;))</code></pre>
+</div>
+<div id="c---simple-summaries" class="section level3">
+<h3>C - Simple summaries</h3>
+<ol style="list-style-type: decimal">
+<li>Using the base-R <code>df$col</code> notation, calculate the mean price of all houses.</li>
+</ol>
+<pre class="r"><code>mean(XXX$XXX)</code></pre>
+<pre class="r"><code>mean(kc_house$price)</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Now, do the same using <code>summarise()</code> with the following template. Do you get the same answer? What is different about the output from <code>summarise()</code> versus using the dollar sign?</li>
+</ol>
+<pre class="r"><code>kc_house %&gt;%
+  summarise(
+    price_mean = mean(XXX)
+  )</code></pre>
+<pre class="r"><code>kc_house %&gt;%
+  summarise(
+    price_mean = mean(price)
+  )</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>What is the <em>median</em> price of all houses? Use the <code>median()</code> function!</li>
+</ol>
+<pre class="r"><code>kc_house %&gt;%
+  summarise(
+    price_median = median(price)
+  )</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>What was the highest selling price? Use the <code>max()</code> function!</li>
+</ol>
+<pre class="r"><code>kc_house %&gt;%
+  summarise(
+    price_max = max(price)
+  )</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Using the following template, sort the data frame in descending order of price. Then, print it. Do you see the house with the highest selling price at the top?</li>
+</ol>
+<pre class="r"><code>kc_house &lt;- kc_house %&gt;%
+  arrange(desc(XXX))
+
+kc_house</code></pre>
+<pre class="r"><code>kc_house &lt;- kc_house %&gt;%
+  arrange(desc(price))
+
+kc_house</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li>What percentage of houses sold for more than 1,000,000? Let’s answer this with <code>summarise()</code>.</li>
+</ol>
+<pre class="r"><code>kc_house %&gt;%
+  summarise(mil_p = mean(XXX &gt; 1000000))</code></pre>
+<pre class="r"><code>kc_house %&gt;%
+  summarise(mil_p = mean(price &gt; 1000000))</code></pre>
+<ol start="7" style="list-style-type: decimal">
+<li>For mansions <em>only</em>, calculate the mean number of floors and bathrooms (hint: before summarising the data, use <code>filter()</code> to only select mansions!)</li>
+</ol>
+<pre class="r"><code>kc_house %&gt;%
+  filter(XXX == XXX) %&gt;%
+  summarise(
+    floors_mean = XXX(XXX),
+    bathrooms_mean = XXX(XXX)
+  )</code></pre>
+<pre class="r"><code>kc_house %&gt;%
+  filter(mansion == &quot;Yes&quot;) %&gt;%
+  summarise(
+    floors_mean = mean(floors),
+    bathrooms_mean = mean(bathrooms)
+  )</code></pre>
+</div>
+<div id="d---simple-grouped-summaries" class="section level3">
+<h3>D - Simple grouped summaries</h3>
+<ol style="list-style-type: decimal">
+<li>How many mansions are there? To do this, use <code>group_by()</code> to group the dataset by the <code>mansions</code> column, then use the <code>n()</code> function to count the number of cases.</li>
+</ol>
+<pre class="r"><code>kc_house %&gt;%
+  group_by(XXX) %&gt;%
+  summarise(XXX = n())</code></pre>
+<pre class="r"><code>kc_house %&gt;%
+  group_by(mansion) %&gt;%
+  summarise(N = n())</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>What is the mean selling price of mansions versus non-mansions? To do this, just add another argument to your <code>summarise()</code> function!</li>
+</ol>
+<pre class="r"><code>kc_house %&gt;%
+  group_by(mansion) %&gt;%
+  summarise(N = n(),
+            XXX = XXX(XXX))</code></pre>
+<pre class="r"><code>kc_house %&gt;%
+  group_by(mansion) %&gt;%
+  summarise(N = n(),
+            price_mean = mean(price))</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Using <code>group_by()</code> and <code>summarise()</code>, create a dataframe showing the same results as the following table.</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="left">mansion</th>
+<th align="right">N</th>
+<th align="right">price_min</th>
+<th align="right">price_mean</th>
+<th align="right">price_median</th>
+<th align="right">price_max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">No</td>
+<td align="right">20862</td>
+<td align="right">75000</td>
+<td align="right">504024</td>
+<td align="right">441000</td>
+<td align="right">3100000</td>
+</tr>
+<tr class="even">
+<td align="left">Yes</td>
+<td align="right">751</td>
+<td align="right">404000</td>
+<td align="right">1541915</td>
+<td align="right">1300000</td>
+<td align="right">7700000</td>
+</tr>
+</tbody>
+</table>
+<ol start="4" style="list-style-type: decimal">
+<li>Do houses built in later years tend to have more living space? To answer this, group the data by <code>built_yr</code>, and then calculate the mean number of living square meters. Be sure to also include the number of houses built in each year!</li>
+</ol>
+<pre class="r"><code>kc_house %&gt;%
+  group_by(built_yr) %&gt;%
+  summarise(N = n(),
+            living = mean(living_sqm))</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Was that table too big? Try using the following code to get the results for each decade rather than each year!</li>
+</ol>
+<pre class="r"><code>kc_house %&gt;%
+  mutate(built_decade = floor(built_yr / 10)) %&gt;%
+  group_by(built_decade) %&gt;%
+  summarise(XX = XX,
+            XX = XX(XX))</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li>A friend of yours who is getting into Seattle real estate wants to know how the number of floors a house has affects its selling price. Create a table for her showing the minimum, mean, and maximum price for houses separated by the number of floors they have.</li>
+</ol>
+</div>
+<div id="e---multiple-groups" class="section level3">
+<h3>E - Multiple groups</h3>
+<ol style="list-style-type: decimal">
+<li>Your friend Brumhilda is interested in statistics on houses in the following 4 zipcodes only: 98001, 98109, 98117, 98199. Create a new dataframe called <code>brumhilda</code> that only contains data from houses in those zipcode (hint: use <code>filter()</code> combined with the <code>%in%</code> operator as follows:</li>
+</ol>
+<pre class="r"><code>brumhilda &lt;- kc_house %&gt;%
+  filter(XXX %in% c(XXX, XXX, XXX, XXX))</code></pre>
+<pre class="r"><code>brumhilda &lt;- kc_house %&gt;%
+  filter(zipcode %in% c(98001, 98109, 98117, 98199))</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>For each of the zip codes, calculate the <code>mean()</code> and <code>median()</code> selling price (as well as the number of houses) in each zip code.</li>
+</ol>
+<pre class="r"><code>brumhilda %&gt;%
+  group_by(zipcode) %&gt;%
+  summarise(price_mean = mean(price),
+           price_median = median(price),
+           N = n())</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Now Brumhilda wants the same data separated by whether or not the house is a mansion or not. Include these results by also grouping the data by <code>mansion</code> (as well as <code>zipcode</code>), and calculating the same summary statistics as before.</li>
+</ol>
+<pre class="r"><code>brumhilda %&gt;%
+  group_by(zipcode, mansion) %&gt;%
+  summarise(price_mean = mean(price),
+           price_median = median(price),
+           N = n())</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Ok that was good, but now she also wants to know what the maximum and minimum number of floors were in each group. Add these summary statistics!</li>
+</ol>
+<pre class="r"><code>brumhilda %&gt;%
+  group_by(zipcode) %&gt;%
+  summarise(price_mean = mean(price),
+           price_median = median(price),
+           floors_min = min(floors),
+           floors_max = max(floors),
+           N = n())</code></pre>
+</div>
+<div id="f---statistics" class="section level3">
+<h3>F - Statistics</h3>
+<ol style="list-style-type: decimal">
+<li>Let’s see if there is a significant difference between the selling prices of houses on the waterfront versus those not on the waterfront. To do this, you’ll conduct a t-test using the <code>t.test()</code> function and assign the result to <code>waterfront_htest</code>. To prepare for the t-test, you need to create two vectors carrying the prices for the houses on the waterfront and those not on the waterfront. (Note: this is a bit of a hack that we don’t need when speciying models the proper way -&gt; next session)</li>
+</ol>
+<pre class="r"><code># create list separating values for waterfron yes and no
+prices &lt;- kc_house %&gt;%
+  mutate(waterfront_lab = 
+           case_when(waterfront == 0 ~ &#39;no_waterfront&#39;,
+                     waterfront == 1 ~ &#39;waterfront&#39;)) %&gt;%
+  with(split(price, waterfront_lab))
+
+# show names</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Fill in the XXs in the code below, such that <code>x</code> becomes the <code>'no_waterfront'</code> prices and <code>y</code> becomes the <code>'waterfront'</code> prices.</li>
+</ol>
+<pre class="r"><code>waterfront_htest &lt;- t.test(x = prices$XX, y = prices$XX)</code></pre>
+<pre class="r"><code>waterfront_htest &lt;- t.test(x = prices$no_waterfront, y = prices$waterfront)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Print your <code>waterfront_htest</code> object to see a printout of the main results.</li>
+</ol>
+<pre class="r"><code>waterfront_htest</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Look at the names of your <code>waterfront_htest</code> object with <code>names()</code>.</li>
+</ol>
+<pre class="r"><code>names(waterfront_htest)</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Using the <code>$</code>, print the test statistic (<code>statistic</code>) from your <code>waterfront_htest</code> object.</li>
+</ol>
+<pre class="r"><code>waterfront_htest$statistic</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li>Now using <code>$</code>, print only the p-value (<code>p.value</code>) from the object.</li>
+</ol>
+<pre class="r"><code>waterfront_htest$p.value</code></pre>
+<ol start="7" style="list-style-type: decimal">
+<li>Run a Wilcoxon test instead of the t-test to evalute whether the result is robust. Is the result the same?</li>
+</ol>
+<pre class="r"><code>wilcox.test(x = prices$XX, y = prices$XX)</code></pre>
+<pre class="r"><code>wilcox.test(x = prices$no_waterfront, y = prices$waterfront)</code></pre>
+</div>
+<div id="x---challenges" class="section level3">
+<h3>X - Challenges</h3>
+<ol style="list-style-type: decimal">
+<li>Which zipcode has the highest percentage of houses on the waterfront? (Hint: group by zipcode, calculate the percentage of houses on the waterfront using <code>mean()</code>, then sort the data in descending order) with <code>arrange()</code>, then select the first row with <code>slice()</code>. Once you find it, try searching for that zipcode on Google Maps and see if it’s location makes sense!</li>
+</ol>
+<pre class="r"><code>kc_house %&gt;%
+  group_by(zipcode) %&gt;%
+  summarise(waterfront_p = mean(waterfront)) %&gt;%
+  arrange(desc(waterfront_p)) %&gt;%
+  slice(1)</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Which house had the highest price to living space ratio? To answer this, create a new variable called <code>price_to_living</code> that takes <code>price / living_sqm</code>. Then, sort the data in descending order of this variable, and select the first row with <code>slice()</code>! What id value do you get?</li>
+</ol>
+<pre class="r"><code>kc_house %&gt;%
+  mutate(price_to_living = price / living_sqm) %&gt;%
+  arrange(desc(price_to_living)) %&gt;%
+  slice(1)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Which are the top 10 zip codes in terms of mean housing prices? To answer this, group the data by zipcode, calculate the mean price, arrange the dataset in descending order of mean price, then select the top 10 rows!</li>
+</ol>
+<pre class="r"><code>kc_house %&gt;%
+  group_by(zipcode) %&gt;%
+  summarise(price_mean = mean(price)) %&gt;%
+  arrange(desc(price_mean)) %&gt;%
+  slice(1:10)</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Create the following dataframe <em>exactly</em> as it appears.</li>
+</ol>
+<pre class="r"><code>kc_house %&gt;%
+  filter(built_yr &gt;= 1990 &amp; built_yr &lt; 1999) %&gt;%
+  group_by(built_yr) %&gt;%
+  summarise(N = n(),
+            price_mean = mean(price),
+            price_max = max(price),
+            living_sqm_mean = mean(living_sqm)) %&gt;%
+  knitr::kable(digits = 0)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">built_yr</th>
+<th align="right">N</th>
+<th align="right">price_mean</th>
+<th align="right">price_max</th>
+<th align="right">living_sqm_mean</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1990</td>
+<td align="right">320</td>
+<td align="right">563966</td>
+<td align="right">3640900</td>
+<td align="right">234</td>
+</tr>
+<tr class="even">
+<td align="right">1991</td>
+<td align="right">224</td>
+<td align="right">630441</td>
+<td align="right">5300000</td>
+<td align="right">244</td>
+</tr>
+<tr class="odd">
+<td align="right">1992</td>
+<td align="right">198</td>
+<td align="right">548169</td>
+<td align="right">2480000</td>
+<td align="right">223</td>
+</tr>
+<tr class="even">
+<td align="right">1993</td>
+<td align="right">202</td>
+<td align="right">556612</td>
+<td align="right">3120000</td>
+<td align="right">226</td>
+</tr>
+<tr class="odd">
+<td align="right">1994</td>
+<td align="right">249</td>
+<td align="right">486834</td>
+<td align="right">2880500</td>
+<td align="right">209</td>
+</tr>
+<tr class="even">
+<td align="right">1995</td>
+<td align="right">169</td>
+<td align="right">577771</td>
+<td align="right">3200000</td>
+<td align="right">224</td>
+</tr>
+<tr class="odd">
+<td align="right">1996</td>
+<td align="right">195</td>
+<td align="right">639534</td>
+<td align="right">3100000</td>
+<td align="right">240</td>
+</tr>
+<tr class="even">
+<td align="right">1997</td>
+<td align="right">177</td>
+<td align="right">606058</td>
+<td align="right">3800000</td>
+<td align="right">234</td>
+</tr>
+<tr class="odd">
+<td align="right">1998</td>
+<td align="right">239</td>
+<td align="right">594159</td>
+<td align="right">1960000</td>
+<td align="right">241</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>kc_house %&gt;%
+  filter(built_yr &gt;= 1990 &amp; built_yr &lt; 1999) %&gt;%
+  group_by(built_yr) %&gt;%
+  summarise(N = n(),
+            price_mean = mean(price),
+            price_max = max(price),
+            living_sqm_mean = mean(living_sqm)) %&gt;%
+  knitr::kable(digits = 0)</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>The <code>chisq.test()</code> function allows you to do conduct a chi square test testing the relationship between two nominal variables. Look at the help menu to see how the function works. Then, conduct a chi-square test to see if there is a relationship between whether a house is on the waterfront and the grade of the house. Do houses on the waterfront tend to have higher (or lower) grades than houses not on the waterfront?</li>
+</ol>
+<pre class="r"><code># First look at a table
+table(kc_house$waterfront, kc_house$grade)</code></pre>
+<pre class="r"><code># Then run the test
+chisq.test(table(kc_house$waterfront, kc_house$grade))</code></pre>
+</div>
+</div>
+<div id="datasets" class="section level2">
+<h2>Datasets</h2>
+<table style="width:89%;">
+<colgroup>
+<col width="8%" />
+<col width="9%" />
+<col width="11%" />
+<col width="59%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">File</th>
+<th align="left">Rows</th>
+<th align="left">Columns</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><a href="https://raw.githubusercontent.com/therbootcamp/BaselRBootcamp_2018July/master/_sessions/_data//baselrbootcamp_data/kc_house.csv">kc_house.csv</a></td>
+<td align="left">21613</td>
+<td align="left">21</td>
+<td align="left">House sale prices for King County between May 2014 and May 2015.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="functions" class="section level2">
+<h2>Functions</h2>
+<p><em>Wrangling</em></p>
+<table style="width:83%;">
+<colgroup>
+<col width="6%" />
+<col width="11%" />
+<col width="65%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Function</th>
+<th align="left">Package</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>rename()</code></td>
+<td align="left"><code>dplyr</code></td>
+<td align="left">Rename columns</td>
+</tr>
+<tr class="even">
+<td align="left"><code>select()</code></td>
+<td align="left"><code>dplyr</code></td>
+<td align="left">Select columns based on name or index</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>filter()</code></td>
+<td align="left"><code>dplyr</code></td>
+<td align="left">Select rows based on some logical criteria</td>
+</tr>
+<tr class="even">
+<td align="left"><code>arrange()</code></td>
+<td align="left"><code>dplyr</code></td>
+<td align="left">Sort rows</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>mutate()</code></td>
+<td align="left"><code>dplyr</code></td>
+<td align="left">Add new columns</td>
+</tr>
+<tr class="even">
+<td align="left"><code>case_when()</code></td>
+<td align="left"><code>dplyr</code></td>
+<td align="left">Recode values of a column</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>group_by(), summarise()</code></td>
+<td align="left"><code>dplyr</code></td>
+<td align="left">Group data and then calculate summary statistics</td>
+</tr>
+<tr class="even">
+<td align="left"><code>left_join()</code></td>
+<td align="left"><code>dplyr</code></td>
+<td align="left">Combine multiple data sets using a key column</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>spread()</code></td>
+<td align="left"><code>tidyr</code></td>
+<td align="left">Convert long data to wide format - from rows to columns</td>
+</tr>
+<tr class="even">
+<td align="left"><code>gather()</code></td>
+<td align="left"><code>tidyr</code></td>
+<td align="left">Convert wide data to long format - from columns to rows</td>
+</tr>
+</tbody>
+</table>
+<p><em>Statistical Tests</em></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Function</th>
+<th align="left">Hypothesis Test</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>t.test()</code></td>
+<td align="left">One and two sample t-test</td>
+</tr>
+<tr class="even">
+<td align="left"><code>wilcox.test()</code></td>
+<td align="left">Wilcoxon test</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>cor.test()</code></td>
+<td align="left">Correlation test</td>
+</tr>
+<tr class="even">
+<td align="left"><code>chisq.test</code></td>
+<td align="left">Chi-square tests for frequency tables</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="resources" class="section level2">
+<h2>Resources</h2>
+<div id="dplyr-vignette" class="section level3">
+<h3><code>dplyr</code> vignette</h3>
+<p>See <a href="https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html" class="uri">https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html</a> for the full dplyr vignette with lots of wrangling tips and tricks.</p>
+</div>
+<div id="cheatsheets" class="section level3">
+<h3>Cheatsheets</h3>
+<p align="center" width="100%">
+<a href="https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf"> <img src="https://image.slidesharecdn.com/data-wrangling-cheatsheet-160705210122/95/data-wrangling-with-dplyr-and-tidyr-cheat-sheet-1-638.jpg?cb=1467752577" style="width:70%"></a> <br> <font style="font-size:10px">from <a href="https://www.rstudio.com/resources/cheatsheets/">R Studio</a></font>
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
