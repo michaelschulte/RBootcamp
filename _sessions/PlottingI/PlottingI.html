@@ -32,8 +32,8 @@ layout: true
       &lt;/span&gt;
     &lt;/a&gt;
   &lt;/div&gt; 
----
 
+---
 
 
 
@@ -86,11 +86,7 @@ hist(x = baselers$age,
 &lt;img src="PlottingI_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
 
 ]
-
-
-
 ---
-
 
 .pull-left45[
 
@@ -125,7 +121,6 @@ boxplot(formula = height ~ sex,
 
 ---
 
-
 .pull-left45[
 
 # Base R Plotting
@@ -154,9 +149,7 @@ plot(x = baselers$height,
 .pull-right45[
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 &lt;img src="PlottingI_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" /&gt;
-
 ]
-
 
 ---
 
@@ -173,21 +166,16 @@ plot(x = baselers$height,
 &lt;p align="center"&gt;&lt;high&gt;Solution: `ggplot2` &lt;/high&gt;&lt;/p&gt;
 
 &lt;img src="https://www.r-graph-gallery.com/wp-content/uploads/2014/09/ggplot_hex.jpg" width="45%" style="display: block; margin: auto;" /&gt;
-
-
-
 ]
-
 .pull-right55[
 
 This plot would take &lt;high&gt;a lot of code in Base R&lt;/high&gt; but &lt;high&gt;just 10 lines of code&lt;/high&gt;, 5 of which controlling the labels, in `ggplot2`.
 
 &lt;img src="PlottingI_files/figure-html/unnamed-chunk-11-1.png" style="display: block; margin: auto;" /&gt;
-
-
 ]
 
 ---
+
 
 # Grammar of Graphics in `ggplot2`
 
@@ -212,8 +200,6 @@ The &lt;high&gt;Grammar of graphics&lt;/high&gt; breaks down plots into several 
 &lt;img src="PlottingI_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" /&gt;
 
 ]
-
-
 ---
 
 # Our goal: Creating this plot
@@ -242,19 +228,14 @@ The &lt;high&gt;Grammar of graphics&lt;/high&gt; breaks down plots into several 
 
 ]
 
-
 .pull-right45[
 
 &lt;img src="PlottingI_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" /&gt;
-
-
 ]
-
 
 ---
 
 # `ggplot()`
-
 
 .pull-left45[
 
@@ -283,7 +264,6 @@ ggplot(data = mpg)
 ---
 
 # `ggplot()`
-
 
 .pull-left45[
 
@@ -481,13 +461,13 @@ ggplot(data = mpg,
 
 &lt;p align="center"&gt; `mpg`&lt;/p&gt;
 
-| displ| hwy|class   | year|
-|-----:|---:|:-------|----:|
-|   5.4|  18|suv     | 2008|
-|   3.3|  22|minivan | 1999|
-|   3.0|  26|midsize | 1999|
-|   4.0|  19|suv     | 2008|
-|   5.2|  15|pickup  | 1999|
+| displ| hwy|class      | year|
+|-----:|---:|:----------|----:|
+|   6.5|  17|suv        | 1999|
+|   4.0|  20|suv        | 2008|
+|   2.4|  31|midsize    | 2008|
+|   2.2|  26|subcompact | 1999|
+|   2.4|  27|compact    | 1999|
 
 
 ]
@@ -914,7 +894,6 @@ class: middle, center
 
 &lt;h1&gt;&lt;a href="https://michaelschulte.github.io/RBootcamp/_sessions/PlottingI/PlottingI_practical.html"&gt;Practical&lt;/a&gt;&lt;/h1&gt;
     </textarea>
-<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
@@ -925,53 +904,12 @@ class: middle, center
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
 });
-(function(d) {
-  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
   if (!r) return;
   s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
   d.head.appendChild(s);
-})(document);
-
-(function(d) {
-  var el = d.getElementsByClassName("remark-slides-area");
-  if (!el) return;
-  var slide, slides = slideshow.getSlides(), els = el[0].children;
-  for (var i = 1; i < slides.length; i++) {
-    slide = slides[i];
-    if (slide.properties.continued === "true" || slide.properties.count === "false") {
-      els[i - 1].className += ' has-continuation';
-    }
-  }
-  var s = d.createElement("style");
-  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
-  d.head.appendChild(s);
-})(document);
-// delete the temporary CSS (for displaying all slides initially) when the user
-// starts to view slides
-(function() {
-  var deleted = false;
-  slideshow.on('beforeShowSlide', function(slide) {
-    if (deleted) return;
-    var sheets = document.styleSheets, node;
-    for (var i = 0; i < sheets.length; i++) {
-      node = sheets[i].ownerNode;
-      if (node.dataset["target"] !== "print-only") continue;
-      node.parentNode.removeChild(node);
-    }
-    deleted = true;
-  });
 })();</script>
-
-<script>
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-</script>
 
 <script>
 (function() {

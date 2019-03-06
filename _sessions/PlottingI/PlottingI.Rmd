@@ -31,8 +31,8 @@ layout: true
       </span>
     </a>
   </div> 
----
 
+---
 
 ```{r, eval = TRUE, echo = FALSE, warning=F,message=F}
 # Code to knit slides
@@ -110,11 +110,7 @@ hist(x = baselers$age,
 ```
 
 ]
-
-
-
 ---
-
 
 .pull-left45[
 
@@ -155,7 +151,6 @@ boxplot(formula = height ~ sex,
 
 ---
 
-
 .pull-left45[
 
 # Base R Plotting
@@ -190,9 +185,7 @@ plot(x = baselers$height,
      ylab = "Income",
      main = "Scatterplot")
 ```
-
 ]
-
 
 ---
 
@@ -211,11 +204,7 @@ plot(x = baselers$height,
 ```{r, echo = FALSE, out.width = "45%"}
 knitr::include_graphics("https://www.r-graph-gallery.com/wp-content/uploads/2014/09/ggplot_hex.jpg")
 ```
-
-
-
 ]
-
 .pull-right55[
 
 This plot would take <high>a lot of code in Base R</high> but <high>just 10 lines of code</high>, 5 of which controlling the labels, in `ggplot2`.
@@ -232,11 +221,10 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = class)) +
        caption = "Source: mpg data in ggplot2") + theme_bw()
 
 ```
-
-
 ]
 
 ---
+
 
 # Grammar of Graphics in `ggplot2`
 
@@ -272,8 +260,6 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = class)) +
 ```
 
 ]
-
-
 ---
 
 # Our goal: Creating this plot
@@ -302,7 +288,6 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = class)) +
 
 ]
 
-
 .pull-right45[
 
 ```{r, echo = FALSE, fig.width = 7, fig.height = 5.5}
@@ -319,15 +304,11 @@ ggplot(data = mpg,
        caption = "Source: mpg data in ggplot2") + theme_bw()
 
 ```
-
-
 ]
-
 
 ---
 
 # `ggplot()`
-
 
 .pull-left45[
 
@@ -353,7 +334,6 @@ ggplot(data = mpg)
 ---
 
 # `ggplot()`
-
 
 .pull-left45[
 
@@ -1123,8 +1103,3 @@ ggplot(data = mpg,
 class: middle, center
 
 <h1><a href="https://michaelschulte.github.io/RBootcamp/_sessions/PlottingI/PlottingI_practical.html">Practical</a></h1>
-
-
-
-
-
