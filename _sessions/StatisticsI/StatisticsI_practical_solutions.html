@@ -649,9 +649,10 @@ prices &lt;- kc_house %&gt;%
 <li>The <code>chisq.test()</code> function allows you to do conduct a chi square test testing the relationship between two nominal variables. Look at the help menu to see how the function works. Then, conduct a chi-square test to see if there is a relationship between whether a house is on the waterfront and the grade of the house. Do houses on the waterfront tend to have higher (or lower) grades than houses not on the waterfront?</li>
 </ol>
 <pre class="r"><code># First look at a table
-table(kc_house$waterfront, kc_house$grade)</code></pre>
+tab &lt;- table(kc_house$waterfront, kc_house$grade)
+tab</code></pre>
 <pre class="r"><code># Then run the test
-chisq.test(table(kc_house$waterfront, kc_house$grade))</code></pre>
+chisq.test(tab)</code></pre>
 </div>
 </div>
 <div id="datasets" class="section level2">

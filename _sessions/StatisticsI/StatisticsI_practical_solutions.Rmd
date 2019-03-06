@@ -486,12 +486,13 @@ kc_house %>%
 
 ```{r}
 # First look at a table
-table(kc_house$waterfront, kc_house$grade)
+tab <- table(kc_house$waterfront, kc_house$grade)
+tab
 ```
 
 ```{r}
 # Then run the test
-chisq.test(table(kc_house$waterfront, kc_house$grade))
+chisq.test(tab)
 ```
 
 
