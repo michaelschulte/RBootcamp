@@ -488,6 +488,11 @@ kc_house %>%
 # First look at a table
 tab <- table(kc_house$waterfront, kc_house$grade)
 tab
+
+tab <- kc_house %>%
+  select(waterfront, grade) %>%
+  table()
+
 ```
 
 ```{r}

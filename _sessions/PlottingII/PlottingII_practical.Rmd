@@ -490,8 +490,7 @@ ggsave(filename = "crime_plot",
 
 5. Customize the code to create a `.png` image.
 
-
-### X - Advanced: Maps 
+### G - Maps 
 
 1. `ggplot2` also allows you to work with maps. The code below, plots a simple globe representation of the world.
 
@@ -621,6 +620,19 @@ map +
 
 ```
 
+
+
+### H - Visualise something you find interesting
+
+This task is a little different from the ones above, because you do not have a dataset available (yet) and no clear goal what your graphic should look like.
+
+1. Think about things that you find interesting, that 'get you going', that make your blood boil, that you spend time on. This could be things like Twitter, music, politics, the weather, the swiss school system, climate change, scouts, ... there is really no limit - come up with 2-3 topics.
+
+2. Evaluate the topics you generated in step 1 on 2 dimensions: a) Is it possible to as a question about this topic that I can visualise with ggplot2? and b) Is there data available online or private that I can use?
+
+3. Given that you could answer both questions in 2) go on and (down)load a fitting dataset, wrangle it and visualise it. Ideally you will put the question you generated on the graph as a (sub)title.
+
+4. Contingency plan: if you struggle (a lot) with 1:3 drop me a note and I will give you a dataset + question. 
 
 ### X - Advanced: Interactive with `plotly::ggplotly()`
 
