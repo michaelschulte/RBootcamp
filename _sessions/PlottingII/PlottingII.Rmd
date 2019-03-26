@@ -1100,7 +1100,7 @@ myplot <- ggplot(data = mpg,
 ggsave(filename = "myplot",
        plot = myplot,
        device = "pdf",
-       path = "figures",
+       path = "3_Figures",
        width = 6, 
        height = 4)
 ```
@@ -1154,10 +1154,10 @@ myplot <- ggplot(data = mpg,
             mytheme
 
 # Create "myplot.png", from myplot
-ggsave(filename = "myplot",
+ggsave(filename = "..3_Figures/myplot",
        plot = myplot,
        device = "png",
-       path = "figures",
+       path = "3_Figures",
        width = 6, 
        height = 4)
 ```
@@ -1170,4 +1170,4 @@ ggsave(filename = "myplot",
 
 class: middle, center
 
-<h1><a href="https://dwulff.github.io/Intro2R_Unibe/_sessions/PlottingII/PlottingII_practical.html">Practical</a></h1>
+<h1><a href="https://michaelschulte.github.io/RBootcamp/_sessions/PlottingII/PlottingII_practical.html">Practical</a></h1>

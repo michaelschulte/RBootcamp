@@ -51,7 +51,7 @@ In this practical you'll practice customizing plots created using the `ggplot2` 
 
 ### A - Setup
 
-1. Open your `BernRBootcamp` R project. It should already have the folders `1_Data` and `2_Code`. Make sure that the data files listed in the `Datasets` section above are in your `1_Data` folder.
+1. Open your `RBootcamp` R project. It should already have the folders `1_Data` and `2_Code`. Make sure that the data files listed in the `Datasets` section above are in your `1_Data` folder. Also check for the folder `3_Figures`.
 
 ```{r}
 # Done!
@@ -343,7 +343,7 @@ crime_facets +
   labs(x = '% public transportation', y = 'Crime frequency')
 ```
 
-### D - Customize plots using `theme()`
+### D - Customize plots using your own `theme()`
 
 1. When you managed to reproduce the target theme, save all of the theme setting in an independent object called `crime_theme`.
 

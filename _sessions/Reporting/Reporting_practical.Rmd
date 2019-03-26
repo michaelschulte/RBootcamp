@@ -1,38 +1,13 @@
 ---
 title: "Reporting"
-author: "
-<table style=\'table-layout:fixed;width:100%;border:0;padding:0;margin:0\'><col width=\'10%\'><col width=\'10%\'>
-  <tr style=\'border:none\'>
-    <td style=\'display:block;width:100%;text-align:left;vertical-align:bottom;padding:0;margin:0;border:none\' nowrap>
-      <font style=\'font-style:normal\'>Introduction to R</font><br>
-      <a href=\'https://dwulff.github.io/Intro2R_Unibe/\'>
-        <i class=\'fas fa-clock\' style='font-size:.9em;\' ></i>
-      </a>
-      <a href=\'https://therbootcamp.github.io\'>
-        <i class=\'fas fa-home' style='font-size:.9em;\'></i>
-      </a>
-      <a href=\'mailto:therbootcamp@gmail.com\'>
-        <i class=\'fas fa-envelope' style='font-size: .9em;\'></i>
-      </a>
-      <a href=\'https://www.linkedin.com/company/basel-r-bootcamp/\'>
-        <i class=\'fab fa-linkedin\' style=\'font-size: .9em;\'></i>
-      </a>
-      <a href=\'https://therbootcamp.github.io\'>
-        <font style=\'font-style:normal\'>Bern R Bootcamp</font>
-      </a>
-    </td>
-    <td style=\'width:100%;vertical-align:bottom;text-align:right;padding:0;margin:0;border:none\'>
-      <img src=\'https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/by-sa.png\' style=\'height:15px;width:80px\'/>
-    </td>
-  </tr>
-</table>"
+subtitle: ""
+author: Michael Schulte-Mecklenbeck
 output:
   html_document:
     css: practical.css
     self_contained: no
 
 ---
-
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(comment = NA, 
                       fig.width = 6, 
@@ -74,7 +49,7 @@ By the end of this practical you will know how to:
 
 ### A - Setup
 
-1. Open your `bernrbootcamp` R project. It should already have the folders `1_Data` and `2_Code`. Make sure that the data files listed in the Datasets section above are in your `2_Data` folder
+1. Open your `RBootcamp` R project. It should already have the folders `1_Data` and `2_Code`. Make sure that the data files listed in the Datasets section above are in your `2_Data` folder
 
 ```{r}
 # Done!
@@ -114,7 +89,7 @@ knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therboot
 
 ### B - Here's your goal!
 
-In this practical you will create as much of [this html document](https://dwulff.github.io/Intro2R_Unibe/_sessions/Reporting/Reporting_answers.html) as you can! Open the document and keep it open in a separate window as you work through the practical!
+In this practical you will create as much of [this html document](https://michaelschulte.github.io/RBootcamp/_sessions/Reporting/Reporting_answers.html) as you can! Open the document and keep it open in a separate window as you work through the practical!
 
 ### C - Load packages, data and set default chunk options
 
