@@ -270,7 +270,7 @@ knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therboot
 
 1. All raw data files (.csv, .sav, etc) should be in a folder (e.g.; `1_Data`) in your R Project directory
 
-2. Keep other files such as images (.jpg, .png) in a different  folder (e.g.; `0_Materials` or `4_Images`)
+2. Keep other files such as images (.jpg, .png) in a different  folder (e.g.; `0_Materials` or `3_Figures`)
 
 3. Put the .Rmd file in the project's main directory for clean referencing
 
