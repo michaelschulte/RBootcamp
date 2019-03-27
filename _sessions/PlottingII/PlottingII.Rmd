@@ -1154,7 +1154,7 @@ myplot <- ggplot(data = mpg,
             mytheme
 
 # Create "myplot.png", from myplot
-ggsave(filename = "..3_Figures/myplot",
+ggsave(filename = "myplot",
        plot = myplot,
        device = "png",
        path = "3_Figures",

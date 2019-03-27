@@ -419,7 +419,7 @@ crime_plot + scale_size(range = c(.5, 3))
 ```{r, echo = TRUE, eval = FALSE}
 crime_plot + 
   scale_size(range = c(XX, XX)) + 
-  scale_y_continuous(limits = c(XX, XX))
+  scale_y_log10(limits = c(XX, XX))
 ```
 
 ```{r}
@@ -833,6 +833,7 @@ The `crime` data set is subsets of the Communities and Crime Unnormalized Data S
 |:------|:------|
 |`viridis`|`install.packages("viridis")`|
 |`ggmap`|`install.packages("ggmap")`|
+|`ggthemes`|`install.packages("ggthemes")`|
 |`plotly`|`install.packages("plotly")`|
 
 ### Functions
