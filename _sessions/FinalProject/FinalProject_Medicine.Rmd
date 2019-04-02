@@ -58,7 +58,7 @@ You should (at least) complete the following tasks
 
 4. Read the `appointments.csv` and the `weather.csv` files into two objects called `appointments` and `weather` respectively. Check out the content of the two datasets in Overview and Datasets above.
 
-```{r, echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE}
+```{r}
 appointments <- read_csv('1_Data/medical_noshows.csv')
 weather <- read_csv('1_Data/weather.csv')
 ```
@@ -68,7 +68,7 @@ weather <- read_csv('1_Data/weather.csv')
 1. We want to first see what variables are in the dataset (check out Datasets above) and whether there are variables with impossible values. Generate an overview of all variables with minimum and maximum values, means and medians for all appropriate numeric variables. Correct the variable(s) that stand out and provide a rational for what you did.
 Also rename Hipertension into Hyptertension and Handcap into Handicap.
 
-```{r, echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE}
+```{r}
 summary(appointments)
 
 appointments <-
@@ -80,13 +80,13 @@ appointments %>%
 
 2. How many patients showed up for their appointment(s), how many did not?
 
-```{r, echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE}
+```{r}
 table(appointments$NoShow)
 ```
 
 3. How many patients are female, how many are male? Who (PatientID) has the most number of appointments? Split that analysis (most number of appointments) for gender.
 
-```{r, echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE}
+```{r}
   appointments %>%
     group_by(PatientId,Gender) %>%
     count(unique(PatientId)) %>%
@@ -188,8 +188,9 @@ dim(full_df)
 
 ### E - Predicting
 
-1. From the given list of parameters, such as gender, time difference between making an appointment and the actual appointment, demographic variables, the weather on the appointment day build different models that predict whether a patient will be a no show for his/her appointment.
+1. From the given list of parameters, such as gender, time difference between making an appointment and the actual appointment, demographic variables, the weather on the appointment day build several different models that predict whether a patient will be a no show for his/her appointment.
 
+2. Explain why you ended up with your final model.
 
 ### F - Presenting the results
 
