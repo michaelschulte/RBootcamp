@@ -1,32 +1,7 @@
 ---
-title: "Final Project"
+title: "Final Project: Medicine"
 subtitle: ""
-author: "
-<table style='table-layout:fixed;width:100%;border:0;padding:0;margin:0'><col width='10%'><col width='10%'>
-  <tr style='border:none'>
-    <td style='display:block;width:100%;text-align:left;vertical-align:bottom;padding:0;margin:0;border:none' nowrap>
-      <font style='font-style:normal'>Introduction to R</font><br>
-      <a href='https://dwulff.github.io/Intro2R_Unibe/'>
-        <i class='fas fa-clock' style='font-size:.9em;' ></i>
-      </a>
-      <a href='https://therbootcamp.github.io'>
-        <i class='fas fa-home' style='font-size:.9em;'></i>
-      </a>
-      <a href='mailto:therbootcamp@gmail.com'>
-        <i class='fas fa-envelope' style='font-size: .9em;'></i>
-      </a>
-      <a href='https://www.linkedin.com/company/basel-r-bootcamp/'>
-        <i class='fab fa-linkedin' style='font-size: .9em;'></i>
-      </a>
-      <a href='https://therbootcamp.github.io'>
-        <font style='font-style:normal'>Bern R Bootcamp</font>
-      </a>
-    </td>
-    <td style='width:100%;vertical-align:bottom;text-align:right;padding:0;margin:0;border:none'>
-      <img src='https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/by-sa.png' style='height:15px;width:80px'/>
-    </td>
-  </tr>
-</table>"
+author: Michael Schulte-Mecklenbeck
 output:
   html_document:
     css: practical.css
@@ -34,14 +9,15 @@ output:
 
 ---
 
-```{r setup, echo = FALSE, message = FALSE}
+```{r setup, echo = FALSE, warning=F, message=F}
 knitr::opts_chunk$set(comment = NA, 
                       fig.width = 6, 
                       fig.height = 6,
                       fig.align = 'center',
                       echo = FALSE, 
                       eval = FALSE, 
-                      warning = FALSE)
+                      warning = FALSE,
+                      message = FALSE)
 
 options(digits = 3)
 library(tidyverse)
@@ -212,7 +188,7 @@ dim(full_df)
 
 ### E - Predicting
 
-From the given list of parameters, such as gender, time difference between making an appointment and the actual appointment, demographic variables, the weather on the appointment day build different models that predict whether the a patient will be a no show for his/her appointment.
+1. From the given list of parameters, such as gender, time difference between making an appointment and the actual appointment, demographic variables, the weather on the appointment day build different models that predict whether a patient will be a no show for his/her appointment.
 
 
 ### F - Presenting the results
@@ -270,12 +246,3 @@ weather <- read_csv('1_Data/weather.csv')
 |RH2M   |Relative Humidity at 2 Meters|
 |T2M |Temperature at 2 Meters|
 |PRECTOT|Precipitation|
-
-
-## Packages
-
-|Package| Installation|
-|:------|:------|
-|`tidyverse`|`install.packages("tidyverse")`|
-|`lubridate`|`install.packages("lubridate")`|
-|`tidylog`|`devtools::install_github("elbersb/tidylog")`|

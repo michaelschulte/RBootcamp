@@ -62,22 +62,22 @@ knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therboot
 
 ### B - Data
 
-1. In this practical, you will load three external data sets `1_Data/^DJI.csv`, `1_Data/^GDAXI.csv`, and `1_Data/^N225.csv`. However, two of these data files are not yet tidy. Specifically, `1_Data/^GDAXI.csv` and `1_Data/\^N225.csv` include a specific character string to represent missings in the data and is not identified by R as such. To identify the `NA`-character string in the data open one of them in a text viewer, (via RStudio or via, e.g., *textedit*). Do you see the string value that indicates missing data? 
+1. In this practical, you will load three external data sets `1_Data\DJI.csv`, `1_Data\GDAXI.csv`, and `1_Data\N225.csv`. However, two of these data files are not yet tidy. Specifically, `1_Data\GDAXI.csv` and `1_Data\N225.csv` include a specific character string to represent missings in the data and is not identified by R as such. To identify the `NA`-character string in the data open one of them in a text viewer, (via RStudio or via, e.g., *textedit*). Do you see the string value that indicates missing data? 
 
-2. Once you have identified the character string for missing data, us the `read_csv()` function to load in the stock index data sets, "1_Data/^DJI.csv", "1_Data/^GDAXI.csv", and "1_Data/^N225.csv", from your `1_Data` folder. In so doing, set an explicit `na`-argument to account for the fact that "1_Data/^GDAXI.csv" "1_Data/^N225.csv" use a specific character string to represent missings in the data.  
+2. Once you have identified the character string for missing data, us the `read_csv()` function to load in the stock index data sets, "1_Data/DJI.csv", "1_Data/GDAXI.csv", and "1_Data/N225.csv", from your `1_Data` folder. In so doing, set an explicit `na`-argument to account for the fact that "1_Data/GDAXI.csv" "1_Data/N225.csv" use a specific character string to represent missings in the data.  
 
 ```{r, echo = FALSE, eval = FALSE}
 # Load index data from local data folder 
-dow <- read_csv(file = '1_Data/^DJI.csv')
-dax <- read_csv(file = '1_Data/^GDAXI.csv', na = 'XXX')  # 'XXX' means missing!
-nik <- read_csv(file = '1_Data/^N225.csv', na = 'XXX')   # 'XXX' means missing!
+dow <- read_csv(file = '1_Data/DJI.csv')
+dax <- read_csv(file = '1_Data/GDAXI.csv', na = 'XXX')  # 'XXX' means missing!
+nik <- read_csv(file = '1_Data/N225.csv', na = 'XXX')   # 'XXX' means missing!
 ```
 
 ```{r}
 # Load index data from local data folder 
-dow <- read_csv(file = '1_Data/^DJI.csv')
-dax <- read_csv(file = '1_Data/^GDAXI.csv', na = 'null')
-nik <- read_csv(file = '1_Data/^N225.csv', na = 'null')
+dow <- read_csv(file = '1_Data/DJI.csv')
+dax <- read_csv(file = '1_Data/GDAXI.csv', na = 'null')
+nik <- read_csv(file = '1_Data/N225.csv', na = 'null')
 ```
 
 3. Load in the exchange rate data sets, `euro-dollar.txt` and `yen-dollar.txt`, from the `1_Data` folder as two new objects called `eur_usd` and `yen_usd`. To do this, use the `read_delim()`-function and `\t` as the `delim`-argument, telling R that the data is tab-delimited. 
@@ -293,11 +293,11 @@ financial %>%
 
 |File | Rows | Columns | Description |
 |:----|:-----|:------|:-----------------------------------------|
-|[\^DJI.csv](https://raw.githubusercontent.com/therbootcamp/BaselRBootcamp_2018July/master/_sessions/_data/baselrbootcamp_data/%5EDJI.csv) | 8364 | 7 | Dow Jones Industrial stock history|
-|[\^GDAXI.csv](https://raw.githubusercontent.com/therbootcamp/BaselRBootcamp_2018July/master/_sessions/_data/baselrbootcamp_data/%5EGDAXI.csv) | 7811 | 7 |DAX stock history |
-|[\^N225.csv](https://raw.githubusercontent.com/therbootcamp/BaselRBootcamp_2018July/master/_sessions/_data/baselrbootcamp_data/%5EN225.csv) | 13722 | 7 | Nikkei stock history |
-|[euro-dollar.txt](https://raw.githubusercontent.com/therbootcamp/BaselRBootcamp_2018July/master/_sessions/_data/baselrbootcamp_data/euro-dollar.txt) | 6545 | 3 | Euro to dollar exchange rates |
-|[yen-dollar.txt](https://raw.githubusercontent.com/therbootcamp/BaselRBootcamp_2018July/master/_sessions/_data/baselrbootcamp_data/yen-dollar.txt) | 8754 | 3 | Yen to dollar exchange rates |
+|[1_Data\DJI.csv](https://michaelschulte.github.io/RBootcamp/1_Data/DJI.csv) | 8364 | 7 | Dow Jones Industrial stock history|
+|[1_Data\GDAXI.csv](https://michaelschulte.github.io/RBootcamp/1_Data/DAXI.csv) | 7811 | 7 |DAX stock history |
+|[1_Data\N225.csv](https://michaelschulte.github.io/RBootcamp/1_Data/N225.csv) | 13722 | 7 | Nikkei stock history |
+|[1_Data\euro-dollar.txt](https://michaelschulte.github.io/RBootcamp/1_Data/euro-dollar.txt) | 6545 | 3 | Euro to dollar exchange rates |
+|[1_Data\yen-dollar.txt](https://michaelschulte.github.io/RBootcamp/1_Data/yen-dollar.txt) | 8754 | 3 | Yen to dollar exchange rates |
 
 ### Variable descriptions
 

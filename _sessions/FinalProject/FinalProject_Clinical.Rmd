@@ -1,45 +1,23 @@
 ---
-title: "Case study: Clinical"
-author: "
-<table style='table-layout:fixed;width:100%;border:0;padding:0;margin:0'><col width='10%'><col width='10%'>
-  <tr style='border:none'>
-    <td style='display:block;width:100%;text-align:left;vertical-align:bottom;padding:0;margin:0;border:none' nowrap>
-      <font style='font-style:normal'>Introduction to R</font><br>
-      <a href='https://dwulff.github.io/Intro2R_Unibe/'>
-        <i class='fas fa-clock' style='font-size:.9em;' ></i>
-      </a>
-      <a href='https://therbootcamp.github.io'>
-        <i class='fas fa-home' style='font-size:.9em;'></i>
-      </a>
-      <a href='mailto:therbootcamp@gmail.com'>
-        <i class='fas fa-envelope' style='font-size: .9em;'></i>
-      </a>
-      <a href='https://www.linkedin.com/company/basel-r-bootcamp/'>
-        <i class='fab fa-linkedin' style='font-size: .9em;'></i>
-      </a>
-      <a href='https://therbootcamp.github.io'>
-        <font style='font-style:normal'>Bern R Bootcamp</font>
-      </a>
-    </td>
-    <td style='width:100%;vertical-align:bottom;text-align:right;padding:0;margin:0;border:none'>
-      <img src='https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/by-sa.png' style='height:15px;width:80px'/>
-    </td>
-  </tr>
-</table>"
+title: "Final Project: Clinical"
+subtitle: ""
+author: Michael Schulte-Mecklenbeck
 output:
   html_document:
     css: practical.css
     self_contained: no
+
 ---
 
-```{r setup, include = FALSE}
+```{r setup, echo = FALSE, warning=F, message=F}
 knitr::opts_chunk$set(comment = NA, 
                       fig.width = 6, 
                       fig.height = 6,
                       fig.align = 'center',
-                      echo = TRUE, 
-                      eval = TRUE, 
-                      warning = FALSE)
+                      echo = FALSE, 
+                      eval = FALSE, 
+                      warning = FALSE,
+                      message = FALSE)
 
 options(digits = 3)
 
@@ -132,22 +110,15 @@ In addition to exploring the effects of the three medications, the researchers a
 
 1. Open your `bernrbootcamp` R project. It should already have the folders `1_Data` and `2_Code`.
 
-2. We want to generate an R Markdown document for this case study. In RStudio, click File -- New File -- R Markdown -- Document -- Html. 
-Save your markdown file *in your main project directory* under the name `dimarta_casestudy.Rmd`. 
+2. Open a new R script. At the top of the script, using comments, write your name and the date. Save it as a new file called `FinalProject_Dimarta.R` in the `bernrbootcamp` folder.  
 
 3. At the top of the script load the `tidyverse` package. 
-
-4. From time to time - don't forget to `Knit` your code with the Knit-Button.
-
-```{r, echo = FALSE, fig.align = 'center', eval = TRUE, out.width = "60%"}
-knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/rmarkdown_ss_D.png")
-```
 
 ### B - Data I/O
 
 1. Using `read_csv()`, load the `dimarta_trial.csv`, `dimarta_demographics.csv`, and `dimarta_biomarker.csv` datasets as *three* new objects called `trial_df`, `demographics_df`, and `biomarker_df`.
 
-```{r, echo = FALSE, eval = FALSE}
+```{r}
 ## read in datasets
 trial_df <- read_csv("XXX/XXX")
 demographics_df <- read_csv("XXX/XXX")
@@ -155,7 +126,7 @@ biomarker_df <- read_csv("XXX/XXX")
 ```
 
 
-```{r, echo = FALSE, eval = TRUE, message = FALSE}
+```{r}
 ## read in datasets
 trial_df <- read_csv("1_Data/dimarta_trial.csv")
 demographics_df <- read_csv("1_Data/dimarta_demographics.csv")
@@ -175,19 +146,19 @@ biomarker_df
 
 1. Change the name of the column `arm` in the `trial_df` data to `StudyArm`.
 
-```{r, echo = FALSE, eval = FALSE}
+```{r}
 trial_df <- XXX %>%
   rename(XXX = XXX)
 ```
 
-```{r, eval = TRUE}
+```{r}
 trial_df <- trial_df %>%
   rename(StudyArm = arm)
 ```
 
 2. Using the `table()` function, look at the values of the `StudyArm` column in `trial_df`. You'll notice the values are 1, 2, and 3. Using `mutate()` and `case_when()` change these values to the appropriate names of the study arms (look at the variable descriptions to see which is which!)
 
-```{r, echo = FALSE, eval = FALSE}
+```{r}
 table(XXX$XXX)
 
 trial_df <- trial_df %>%
@@ -198,7 +169,7 @@ trial_df <- trial_df %>%
   ))
 ```
 
-```{r, eval = TRUE}
+```{r}
 # table(trial_df$StudyArm)
 
 trial_df <- trial_df %>%
@@ -212,7 +183,7 @@ trial_df <- trial_df %>%
 
 3. In the `demographics_df` data, you'll see that gender is coded as 0 and 1. Using `mutate()` create a *new* column in `demographics_df` called `gender_c` that shows gender as a string, where 0 = "male", and 1 = "female".
 
-```{r, echo = FALSE, eval = FALSE}
+```{r}
 demographics_df <- demographics_df %>%
   mutate(gender_c = case_when(
               XXX == 0 ~ "XXX",
@@ -231,7 +202,7 @@ demographics_df <- demographics_df %>%
 
 4. Now let's create a new object called `dimarta_df` that combines data from `trial_df` and `demographics_df`. To do this, use `left_join()` to combine the `trial_df` data with the `demographics_df` data. This will merge the two datasets so you can have the study results and demographic data in the same dataframe. Make sure to assign the result to a new object called `dimarta_df`
 
-```{r, echo = FALSE, eval = FALSE}
+```{r}
 # Create a new dataframe called dimarta_df that contains both trial_df and demographics_df
 dimarta_df <- trial_df %>%
   left_join(XXX)
@@ -272,7 +243,7 @@ mean(dimarta_df$age)
 
 9. Create a table showing how many male and female patients were in the trial.
 
-```{r, eval = FALSE, echo = FALSE}
+```{r}
 dimarta_df %>%
   group_by(XXX) %>%
   summarise(
@@ -309,7 +280,7 @@ dimarta_df %>%
 
 12. Add a new column to the `dimarta_df` data called `histamine_change` that shows the *change* in patient's histamine levels from the start to the end of the trial (Hint: use `mutate()` and just subtract `histamine_start` from `histamine_end`!)
 
-```{r, eval = TRUE}
+```{r}
 dimarta_df <- dimarta_df %>%
   mutate(
     histamine_change = histamine_end - histamine_start
@@ -331,7 +302,7 @@ dimarta_df %>%
 
 14. Calculate the percentage of patients who tested positive for each of the three biomarkers (Hint: If you calculate the `mean()` of a logical vector, you will get the percentage of TRUE values!)
 
-```{r, eval = FALSE, echo = FALSE}
+```{r}
 # Calculate percent of patients with positive biomarkers
 
 dimarta_df %>%
@@ -404,7 +375,7 @@ dimarta_df %>%
 
 1. Create boxplots showing the relationship between study arm and histamine change.
 
-```{r, echo = FALSE, eval = FALSE}
+```{r}
 ggplot(data = XXX,
        mapping = aes(x = XXX, 
                      y = XXX)) +
@@ -469,7 +440,7 @@ ggplot(data = dimarta_df,
 
 5. Is there a correlation between patient's starting and ending histamiine levels? Create a scatterplot with a regression line to find out!
 
-```{r, echo = FALSE, eval = FALSE}
+```{r}
 ggplot(data = XXX,
        aes(x = XXX, y = XXX)) +
   geom_XXX() + 
@@ -478,7 +449,7 @@ ggplot(data = XXX,
        caption = "XXX")
 ```
 
-```{r, eval = TRUE, message = FALSE}
+```{r}
 ggplot(data = dimarta_df,
        aes(x = histamine_start, 
            y = histamine_end)) +
@@ -490,7 +461,7 @@ ggplot(data = dimarta_df,
 
 6. Now create the same plot as above, but have different colored points for different study arms (but only one regression line).
 
-```{r, eval = TRUE, message = FALSE}
+```{r}
 ggplot(data = dimarta_df,
        aes(x = histamine_start, 
            y = histamine_end,
@@ -503,7 +474,7 @@ ggplot(data = dimarta_df,
 
 7. Instead of having different study arms as different colored points, create another plot using `facet_wrap()` to have different study arms in different plotting panels.
 
-```{r, eval = TRUE, message = FALSE}
+```{r}
 ggplot(data = dimarta_df,
        aes(x = histamine_start, 
            y = histamine_end)) +
@@ -589,6 +560,17 @@ mean(abs(arm_glm$residuals))
 
 ```
 
+### F - Presenting the results
+
+1. Generate a new file with `File - R Markdown - Document` (with the default: HTML). Save this file to your `BernRBootcamp` folder. 
+
+2. Document your 3 central insights out of this dataset. Describe what the insights are with your own words and document them with figures, statistics and tables produced with R code in your Marddown file `FinalReport.html`.   
+
+3. Generate a new file with `File - R Markdown - Presentation` (with the default: HTML Isoslides). Save this file to your `BernRBootcamp` folder `FinalPresentation.html`. 
+
+4. Prepare a 15 minute presentation documenting your approach to the Document your 3 central insights out of this dataset. Describe what the insights are with your own words and document them with figures, statistics and tables produced with R code in your Marddown file.
+
+
 ## Datasets
 
 |File | Rows | Columns | Description |
@@ -633,12 +615,3 @@ Table: Table2. `dimarta_demographics.csv` variable description:
 |     BiomarkerStatus| Result of the test for the biomarker.|
 
 Table: Table3. `dimarta_biomarker.csv` variable description:
-
-## Functions
-
-### Packages
-
-|Package| Installation|
-|:------|:------|
-|`tidyverse`|`install.packages("tidyverse")`|
-|`haven`|`install.packages("haven")`|
