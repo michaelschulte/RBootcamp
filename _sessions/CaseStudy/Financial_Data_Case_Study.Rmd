@@ -294,7 +294,7 @@ financial %>%
 |File | Rows | Columns | Description |
 |:----|:-----|:------|:-----------------------------------------|
 |[1_Data\DJI.csv](https://michaelschulte.github.io/RBootcamp/1_Data/DJI.csv) | 8364 | 7 | Dow Jones Industrial stock history|
-|[1_Data\GDAXI.csv](https://michaelschulte.github.io/RBootcamp/1_Data/DAXI.csv) | 7811 | 7 |DAX stock history |
+|[1_Data\DAXI.csv](https://michaelschulte.github.io/RBootcamp/1_Data/DAXI.csv) | 7811 | 7 |DAX stock history |
 |[1_Data\N225.csv](https://michaelschulte.github.io/RBootcamp/1_Data/N225.csv) | 13722 | 7 | Nikkei stock history |
 |[1_Data\euro-dollar.txt](https://michaelschulte.github.io/RBootcamp/1_Data/euro-dollar.txt) | 6545 | 3 | Euro to dollar exchange rates |
 |[1_Data\yen-dollar.txt](https://michaelschulte.github.io/RBootcamp/1_Data/yen-dollar.txt) | 8754 | 3 | Yen to dollar exchange rates |
