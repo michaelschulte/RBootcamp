@@ -222,8 +222,8 @@ weather <- read_csv('1_Data/weather.csv')
 |PatientId | ID of a patient |
 |AppointmentID | ID for each appointment |
 |Gender | Male or Female|
-|ScheduledDay | The day of the actual appointment, when patients have to visit the doctor |
-|AppointmentDay | The day someone called or registered the appointment, this should be before the appointment|
+|AppointmentDay | The day of the actual appointment, when patients have to visit the doctor |
+|ScheduledDay | The day someone called or registered the appointment, this should be before the appointment|
 |Age | How old is the patient|
 |Neighbourhood | Where the patient was born|
 |Hipertension | True or False |

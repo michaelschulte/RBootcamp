@@ -68,16 +68,16 @@ knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therboot
 
 ```{r, echo = FALSE, eval = FALSE}
 # Load index data from local data folder 
-dow <- read_csv(file = '1_Data/DJI.csv')
-dax <- read_csv(file = '1_Data/GDAXI.csv', na = 'XXX')  # 'XXX' means missing!
-nik <- read_csv(file = '1_Data/N225.csv', na = 'XXX')   # 'XXX' means missing!
+dow <- read_csv(file = '1_Data/^DJI.csv')
+dax <- read_csv(file = '1_Data/^GDAXI.csv', na = 'XXX')  # 'XXX' means missing!
+nik <- read_csv(file = '1_Data/^N225.csv', na = 'XXX')   # 'XXX' means missing!
 ```
 
 ```{r}
 # Load index data from local data folder 
-dow <- read_csv(file = '1_Data/DJI.csv')
-dax <- read_csv(file = '1_Data/GDAXI.csv', na = 'null')
-nik <- read_csv(file = '1_Data/N225.csv', na = 'null')
+dow <- read_csv(file = '1_Data/^DJI.csv')
+dax <- read_csv(file = '1_Data/^GDAXI.csv', na = 'null')
+nik <- read_csv(file = '1_Data/^N225.csv', na = 'null')
 ```
 
 3. Load in the exchange rate data sets, `euro-dollar.txt` and `yen-dollar.txt`, from the `1_Data` folder as two new objects called `eur_usd` and `yen_usd`. To do this, use the `read_delim()`-function and `\t` as the `delim`-argument, telling R that the data is tab-delimited. 
