@@ -1,24 +1,11 @@
 ---
-title: "Next steps"
+title: "Next Steps"
 author: "
   Introduction to R<br>
   <a href='https://therbootcamp.github.io'>
-    Bern R Bootcamp
-  </a>
-  <br>
-  <a href='https://dwulff.github.io/Intro2R_Unibe/'>
-    <i class='fas fa-clock' style='font-size:.9em;'></i>
-  </a>&#8239; 
-  <a href='https://therbootcamp.github.io'>
-    <i class='fas fa-home' style='font-size:.9em;' ></i>
-  </a>&#8239;
-  <a href='mailto:therbootcamp@gmail.com'>
-    <i class='fas fa-envelope' style='font-size: .9em;'></i>
-  </a>&#8239;
-  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'>
-    <i class='fab fa-linkedin' style='font-size: .9em;'></i>
+    R Bootcamp
   </a>"
-date: "February 2019"
+date: "FS 2019"
 output:
   xaringan::moon_reader:
     css: ["default", "baselrbootcamp.css"]
@@ -28,9 +15,7 @@ output:
       highlightLines: true
       countIncrementalSlides: false
       ratio: '16:9'
-      
 ---
-
 layout: true
 
 <div class="my-footer">
@@ -45,15 +30,10 @@ layout: true
         </font>
       </span>
     </a>
-    <a href="https://therbootcamp.github.io/">
-      <font color="#7E7E7E">
-       Introduction to R | February 2019
-      </font>
-    </a>
-    </span>
   </div> 
-  
+
 ---
+
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -66,19 +46,9 @@ options(width=110)
 options(digits = 4)
 ```
 
+class: middle, center
 
-.pull-left45[
-<br><br><br><br><br>
-#  Hello Data Scientist!
-
-In 3 days, 9 sessions, and 21 hours you have come a long way.
-
-]
-
-.pull-right4[
-
-<img src="https://dwulff.github.io/Intro2R_Unibe/_sessions/Welcome/image/schedule.png" height="580" align="center">
-]
+<h1>Hello Data Scientist!</h1>
 
 ---
 
@@ -245,7 +215,7 @@ A <high>social graph</high> of package Co-authors using [`tidyverse`](https://cr
 
 <p align = "center">
 
-<iframe width="600" height="337" src="https://www.youtube.com/embed/bd1mEm2Fy08" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="600" height="337" src="https://www.youtube.com/watch?v=flUvktRUVFU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 <high>Sundar Pichai @ Google IO, May 2018</high>
 
@@ -336,7 +306,6 @@ ggmap(get_map(c(7.588576, 47.559601),zoom=16))
 2. Read books<br>
 3. Consult websites<br>
 4. Attend R group<br>
-5. Get consulting<br>
 ]
 
 </font>
@@ -474,113 +443,12 @@ The web is a great place to learn about R.
 <img src="image/bernr.png" style="height:440px">
 </p>
 
----
-
-# Consulting
-
-<table class="tg"  style="cellspacing:0; cellpadding:0; border:none">
-  <tr>
-    <th class="tg-yw4l">
-    
-  <p align="center"><br>
-    <a href="www.dirkwulff.org"><img border="0" alt="W3Schools" src="https://therbootcamp.github.io/assets/img/dirk_square_small2.png" height="230" style="border-radius:50%"></a><br>
-
-<p align="center">
-<font size = 5>Dr. Dirk Wulff</font><br><br>
-<a href="www.dirkwulff.org"><b>dirkwulff.org</b></a><br>
-<a href="https://github.com/dwulff"><b>github.com/dwulff</b></a><br>
-<font size=4><i>packages: </i></font> 
-<a href="https://cran.r-project.org/web/packages/cstab/index.html"><b>cstab</b></a>, <br>
-<a href="https://cran.r-project.org/web/packages/mousetrap/index.html"><b>mousetrap</b></a>, <a href="https://cran.r-project.org/web/packages/memnet/index.html"><b>memnet</b> <a href="https://github.com/dwulff/choicepp"><b>choicepp</b>
-</p>  
-  
-    </th>
-    <th class="tg-yw4l"><p align="center"><br>
-    <a href="www.nathanieldphillips.com/"><img border="0" alt="W3Schools" src="https://therbootcamp.github.io/assets/img/nathaniel_square_small.png" height="230" style="border-radius:50%"></a><br>
-
-<p align="center">
-<font size = 5>Dr. Nathaniel Phillips</font><br><br>
-<a href="www.nathanieldphillips.com/"><b>nathanieldphillips.com</b></a><br>
-<a href="https://github.com/ndphillips"><b>github.com/ndphillips</b></a><br>
-<font size=4><i>packages: </i></font> 
-<a href="https://github.com/ndphillips/yarrr"><b>yarrr</b></a>, <br>
-<a href="https://github.com/ndphillips/FFTrees"><b>FFTrees</b></a></th>
-
-<th class="tg-yw4l">
- <p align="center">
-<p align="center"><br>
-    <a href="https://psychologie.unibas.ch/de/personen/markus-steiner/about-me/"><img border="0" alt="W3Schools" src="https://therbootcamp.github.io/assets/img/markus_square2.png" height="230" style="border-radius:50%"></a><br>
-
-<p align="center">
-<font size = 5>Markus Steiner</font><br><br>
-<a href="https://github.com/mdsteiner"><b>github.com/mdsteiner</b></a><br>
-<font size=4><i>package: </i></font> 
-<a href="https://github.com/ndphillips/ShinyPsych"><b>ShinyPsych</b> <br><br><br>
-</p></th>
-
-<th class="tg-yw4l">
- <p align="center">
-<p align="center"><br>
-    <a href="www.schulte-mecklenbeck.com"><img border="0" alt="W3Schools" src="https://therbootcamp.github.io/assets/img/michael_square.png" height="230" style="border-radius:50%"></a><br>
-
-<p align="center">
-<font size = 5>Dr Michael Schulte-M.</font><br><br>
-<a href="www.schulte-mecklenbeck.com"><b>schulte-mecklenbeck.com</b></a><br>
-<a href="https://github.com/schultem"><b>github.com/schultem</b></a><br> <br><br>
-</p></th>
-
-
-</tr>
-
-</table>
-
----
-
-# Next Bootcamps
-
-
-.pull-left45[
-
-
-<p align="center">
-
-<a class="project-link" href="mailto:therbootcamp@gmail.com?subject=Preregistration for Statistics with R&body=I would like to preregister for the R Bootcamp on 'Statistics with R' in February/March 2019 (tbc) in Basel, Switzerland." align="center">
-
-<font style="font-size:26px;weight:700"> Statistics with R</font><br>
-<br>
-<img src="image/statistics.png" height="260px" width="480px"></img><br>
-
-<high>2 days, April 6-7, 2019</high><br><br><br>
-</a>
-
-</p>
-
-
-]
-
-.pull-right45[
-
-<p align="center">
-
-<a href = "https://advancedstudies.unibas.ch/courses/course/applied-machine-learning-with-r-208291">
-<font style="font-size:26px;weight:700"> Applied Machine Learning with R </font><br>
-<br>
-<img src="image/machine_learning.png" height="260px" width="480px"></img><br>
-
-<high>2 days, May 11-12, 2019</high></a>
-
-</p>
-
-]
-
-
 
 ---
 
 
-# Thank you
-
+# Thank you!
 
 <a href="http://i.imgur.com/PgtvQar.png"><font size=5>Here is an R Joke.</font></a><br><br>
-<font size=5>And now one more thing</font>...
+
 
